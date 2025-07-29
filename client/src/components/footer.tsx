@@ -1,4 +1,5 @@
 import { Instagram, Facebook, Youtube, MapPin, Mail, Clock } from "lucide-react";
+import logoImage from "@assets/MinaOnTheMap Logo Audition_1753800500181.png";
 
 export default function Footer() {
   const quickLinks = [
@@ -18,7 +19,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center mb-4">
               <img 
-                src="/attached_assets/MinaOnTheMap Logo Audition_1753800500181.png" 
+                src={logoImage} 
                 alt="Mina on the Map Logo" 
                 className="h-10 w-auto filter brightness-0 invert"
               />

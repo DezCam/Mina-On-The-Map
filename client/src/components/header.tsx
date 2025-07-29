@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
+import logoImage from "@assets/MinaOnTheMap Logo Audition_1753800500181.png";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -34,7 +35,7 @@ export default function Header() {
           {/* Logo */}
           <div className="flex items-center">
             <img 
-              src="/attached_assets/MinaOnTheMap Logo Audition_1753800500181.png" 
+              src={logoImage} 
               alt="Mina on the Map Logo" 
               className="h-12 w-auto"
             />

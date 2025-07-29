@@ -34,7 +34,7 @@ export default function Header() {
           {/* Logo */}
           <div className="flex items-center">
             <img 
-              src="/attached_assets/MinaOnTheMap Logo Audition_1753800066592.png" 
+              src="../../attached_assets/MinaOnTheMap Logo Audition_1753800066592.png" 
               alt="Mina on the Map Logo" 
               className="w-12 h-12 mr-3"
             />

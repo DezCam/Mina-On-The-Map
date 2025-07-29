@@ -7,17 +7,17 @@ export interface IStorage {
   getFeaturedGuide(): Promise<TravelGuide | undefined>;
   getTravelGuide(id: string): Promise<TravelGuide | undefined>;
   createTravelGuide(guide: InsertTravelGuide): Promise<TravelGuide>;
-  
+
   // Destinations
   getDestinations(): Promise<Destination[]>;
   getTopDestinations(): Promise<Destination[]>;
   createDestination(destination: InsertDestination): Promise<Destination>;
-  
+
   // Blog Posts
   getBlogPosts(): Promise<BlogPost[]>;
   getRecentPosts(): Promise<BlogPost[]>;
   createBlogPost(post: InsertBlogPost): Promise<BlogPost>;
-  
+
   // Search
   searchGuidesAndDestinations(query: string): Promise<{ guides: TravelGuide[], destinations: Destination[] }>;
 }
@@ -31,7 +31,7 @@ export class MemStorage implements IStorage {
     this.travelGuides = new Map();
     this.destinations = new Map();
     this.blogPosts = new Map();
-    
+
     // Initialize with sample data
     this.initializeData();
   }
@@ -40,9 +40,9 @@ export class MemStorage implements IStorage {
     // Featured Travel Guide
     const featuredGuide: TravelGuide = {
       id: randomUUID(),
-      title: "Greece Island Hopping: Your Ultimate Mediterranean Adventure",
-      description: "Most travelers spend hours trying to figure out the most beautiful islands and hidden gems to visit. We've created a detailed itinerary that gives you a step-by-step game plan so you can experience the best of Greece's islands at the perfect times and create memories that will last forever!",
-      excerpt: "Discover the most beautiful Greek islands with our comprehensive island-hopping guide.",
+      title: "San Francisco: Your Ultimate City Adventure",
+      description: "Most travelers spend hours trying to figure out the most beautiful sights and hidden gems to visit. We've created a detailed itinerary that gives you a step-by-step game plan so you can experience the best of San Francisco at the perfect times and create memories that will last forever!",
+      excerpt: "Discover the most beautiful San Francisco with our comprehensive guide.",
       imageUrl: "https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600",
       category: "Adventure Travel",
       readTime: "12 min read",
@@ -216,7 +216,7 @@ export class MemStorage implements IStorage {
 
   async searchGuidesAndDestinations(query: string): Promise<{ guides: TravelGuide[], destinations: Destination[] }> {
     const lowerQuery = query.toLowerCase();
-    
+
     const guides = Array.from(this.travelGuides.values()).filter(guide =>
       guide.title.toLowerCase().includes(lowerQuery) ||
       guide.description.toLowerCase().includes(lowerQuery) ||

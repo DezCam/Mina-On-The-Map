@@ -25,19 +25,19 @@ export default function HeroSection() {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('/hero-bg.jpg')",
+          backgroundImage: "url('/hero-image.jpg')",
           backgroundColor: '#8B7355'
         }}
       >
         <img 
-          src="/hero-bg.jpg" 
+          src="/hero-image.jpg" 
           alt="Coastal landscape background"
           className="w-full h-full object-cover opacity-0"
           onLoad={(e) => {
             console.log('Hero image loaded, making visible');
             e.currentTarget.style.opacity = '1';
             if (e.currentTarget.parentElement) {
-              e.currentTarget.parentElement.style.backgroundImage = "url('/hero-bg.jpg')";
+              e.currentTarget.parentElement.style.backgroundImage = "url('/hero-image.jpg')";
             }
           }}
           onError={(e) => {

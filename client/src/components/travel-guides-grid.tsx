@@ -11,7 +11,7 @@ export default function TravelGuidesGrid() {
   if (isLoading) {
     return (
       <section id="guides" className="mb-16">
-        <h2 className="font-lato font-bold text-3xl text-earth-brown mb-8 text-center">Recent Travel Guides</h2>
+        <h2 className="font-lato font-bold text-3xl text-earth-brown mb-8 text-center">Travel Themes & Destinations</h2>
         <div className="grid md:grid-cols-2 gap-8">
           {[...Array(4)].map((_, i) => (
             <Card key={i} className="overflow-hidden">
@@ -35,8 +35,8 @@ export default function TravelGuidesGrid() {
 
   return (
     <section id="guides" className="mb-16">
-      <h2 className="font-lato font-bold text-3xl text-earth-brown mb-8 text-center">Recent Travel Guides</h2>
-      
+      <h2 className="font-lato font-bold text-3xl text-earth-brown mb-8 text-center">Travel Themes & Destinations</h2>
+
       <div className="grid md:grid-cols-2 gap-8">
         {nonFeaturedGuides.map((guide) => (
           <Card key={guide.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">

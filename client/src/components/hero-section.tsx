@@ -25,7 +25,7 @@ export default function HeroSection() {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('/attached_assets/IMG_0138 (Landing)_1753809792160.jpg')"
+          backgroundImage: "url('/attached_assets/IMG_0138%20(Landing)_1753809792160.jpg')"
         }}
       />
       <div className="absolute inset-0 bg-black bg-opacity-40" />

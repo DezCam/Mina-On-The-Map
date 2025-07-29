@@ -1,0 +1,176 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Merriweather:wght@300;400;700&display=swap');
+
+:root {
+  --background: hsl(60, 43%, 96%);
+  --foreground: hsl(25, 67%, 15%);
+  --muted: hsl(60, 4.8%, 95.9%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(25, 67%, 15%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(25, 67%, 15%);
+  --border: hsl(20, 5.9%, 90%);
+  --input: hsl(20, 5.9%, 90%);
+  --primary: hsl(180, 100%, 27%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(60, 4.8%, 95.9%);
+  --secondary-foreground: hsl(24, 9.8%, 10%);
+  --accent: hsl(60, 4.8%, 95.9%);
+  --accent-foreground: hsl(24, 9.8%, 10%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(25, 67%, 15%);
+  --radius: 0.5rem;
+  
+  /* Custom travel blog colors */
+  --earth-brown: hsl(25, 67%, 27%);
+  --sandy-tan: hsl(40, 50%, 74%);
+  --teal-primary: hsl(180, 100%, 27%);
+  --teal-light: hsl(177, 66%, 41%);
+  --warm-beige: hsl(60, 29%, 94%);
+  --cream: hsl(60, 43%, 96%);
+  --dark-brown: hsl(25, 67%, 15%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(180, 100%, 27%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-serif antialiased bg-background text-foreground;
+    font-family: 'Merriweather', serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lato', sans-serif;
+  }
+
+  .font-lato {
+    font-family: 'Lato', sans-serif;
+  }
+
+  .font-merriweather {
+    font-family: 'Merriweather', serif;
+  }
+}
+
+@layer components {
+  .earth-brown {
+    color: var(--earth-brown);
+  }
+
+  .bg-earth-brown {
+    background-color: var(--earth-brown);
+  }
+
+  .sandy-tan {
+    color: var(--sandy-tan);
+  }
+
+  .bg-sandy-tan {
+    background-color: var(--sandy-tan);
+  }
+
+  .teal-primary {
+    color: var(--teal-primary);
+  }
+
+  .bg-teal-primary {
+    background-color: var(--teal-primary);
+  }
+
+  .teal-light {
+    color: var(--teal-light);
+  }
+
+  .bg-teal-light {
+    background-color: var(--teal-light);
+  }
+
+  .warm-beige {
+    color: var(--warm-beige);
+  }
+
+  .bg-warm-beige {
+    background-color: var(--warm-beige);
+  }
+
+  .cream {
+    color: var(--cream);
+  }
+
+  .bg-cream {
+    background-color: var(--cream);
+  }
+
+  .dark-brown {
+    color: var(--dark-brown);
+  }
+
+  .bg-dark-brown {
+    background-color: var(--dark-brown);
+  }
+
+  .text-earth-brown {
+    color: var(--earth-brown);
+  }
+
+  .text-sandy-tan {
+    color: var(--sandy-tan);
+  }
+
+  .text-teal-primary {
+    color: var(--teal-primary);
+  }
+
+  .text-teal-light {
+    color: var(--teal-light);
+  }
+
+  .text-warm-beige {
+    color: var(--warm-beige);
+  }
+
+  .text-dark-brown {
+    color: var(--dark-brown);
+  }
+
+  .border-sandy-tan {
+    border-color: var(--sandy-tan);
+  }
+
+  .hover\:bg-teal-light:hover {
+    background-color: var(--teal-light);
+  }
+
+  .hover\:text-teal-primary:hover {
+    color: var(--teal-primary);
+  }
+}

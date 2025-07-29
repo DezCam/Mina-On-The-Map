@@ -17,10 +17,11 @@ export default function Footer() {
           {/* About Section */}
           <div>
             <div className="flex items-center mb-4">
-              <div className="bg-teal-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-lato font-bold mr-2">
-                M
-              </div>
-              <h3 className="font-lato font-bold text-lg">Mina on the Map</h3>
+              <img 
+                src="/attached_assets/Screenshot 2025-07-29 at 7.47.08 AM_1753800430764.png" 
+                alt="Mina on the Map Logo" 
+                className="h-8 w-auto filter brightness-0 invert"
+              />
             </div>
             <p className="font-merriweather text-sm text-gray-300 mb-4">
               Your trusted companion for authentic travel experiences and unforgettable adventures around the globe.

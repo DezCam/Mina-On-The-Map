@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Search } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import heroImage from "@assets/IMG_0138 (Landing)_1753809936012.jpg";
 
 export default function HeroSection() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -26,7 +25,7 @@ export default function HeroSection() {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url(${heroImage})`
+          backgroundImage: "url('/hero-image.jpg')"
         }}
       />
       <div className="absolute inset-0 bg-black bg-opacity-40" />

@@ -70,16 +70,11 @@ export default function Sidebar() {
         <CardContent className="p-6">
           {/* Blog Header with Logo */}
           <div className="relative mb-6">
-            <img 
-              src="/attached_assets/IMG_0138 (Landing)_1753809792160.jpg" 
-              alt="Mina's Travel Blog"
-              className="w-full h-32 object-cover rounded-lg"
-            />
-            <div className="absolute inset-0 bg-black bg-opacity-30 rounded-lg flex items-center justify-center">
+            <div className="w-full h-48 bg-gradient-to-br from-cream-light to-teal-light rounded-lg flex items-center justify-center p-6">
               <img 
                 src="/mina-logo.png" 
                 alt="Mina on the Map Logo" 
-                className="h-20 w-auto"
+                className="w-full max-w-[180px] h-auto"
               />
             </div>
           </div>

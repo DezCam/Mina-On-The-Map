@@ -43,7 +43,7 @@ export class MemStorage implements IStorage {
       title: "San Francisco: Your Ultimate City Adventure",
       description: "Most travelers spend hours trying to figure out the most beautiful sights and hidden gems to visit. We've created a detailed itinerary that gives you a step-by-step game plan so you can experience the best of San Francisco at the perfect times and create memories that will last forever!",
       excerpt: "Discover the most beautiful San Francisco with our comprehensive guide.",
-      imageUrl: "https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=600",
+      imageUrl: "/attached_assets/81362AA0-7451-4B5D-85AC-45AFD1DF5C2E_1_105_c_1753810421287.jpeg",
       category: "Adventure Travel",
       readTime: "12 min read",
       isFeatured: true,

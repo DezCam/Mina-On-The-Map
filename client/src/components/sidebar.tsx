@@ -11,7 +11,7 @@ import type { BlogPost } from "@shared/schema";
 export default function Sidebar() {
   const [email, setEmail] = useState("");
   const { toast } = useToast();
-  
+
   const { data: recentPosts, isLoading } = useQuery<BlogPost[]>({
     queryKey: ["/api/blog-posts/recent"],
   });
@@ -43,7 +43,7 @@ export default function Sidebar() {
         <CardContent className="p-8">
           <h3 className="font-lato font-bold text-2xl mb-4">Join the Map Tribe</h3>
           <p className="font-merriweather mb-6">Get exclusive travel tips, destination guides, and adventure inspiration delivered to your inbox weekly.</p>
-          
+
           <form onSubmit={handleNewsletterSubmit} className="space-y-4">
             <Input
               type="email"
@@ -60,16 +60,32 @@ export default function Sidebar() {
               Subscribe Now
             </Button>
           </form>
-          
+
           <p className="text-xs mt-4 opacity-80">No spam, unsubscribe anytime. Read our privacy policy.</p>
         </CardContent>
       </Card>
 
       {/* Recent Posts */}
-      <Card className="bg-white rounded-2xl mb-8">
+      <Card className="bg-white rounded-2xl">
         <CardContent className="p-6">
+          {/* Blog Header with Logo */}
+          <div className="relative mb-6">
+            <img 
+              src="/attached_assets/IMG_0138 (Landing)_1753809792160.jpg" 
+              alt="Mina's Travel Blog"
+              className="w-full h-32 object-cover rounded-lg"
+            />
+            <div className="absolute inset-0 bg-black bg-opacity-30 rounded-lg flex items-center justify-center">
+              <img 
+                src="/attached_assets/MinaOnTheMap Logo Audition_1753800500181.png" 
+                alt="Mina on the Map Logo" 
+                className="h-16 w-auto filter brightness-0 invert"
+              />
+            </div>
+          </div>
+
           <h3 className="font-lato font-bold text-xl text-earth-brown mb-6">Recent Posts</h3>
-          
+
           <div className="space-y-4">
             {isLoading ? (
               [...Array(3)].map((_, i) => (
@@ -113,7 +129,7 @@ export default function Sidebar() {
             <Instagram className="text-teal-primary mr-2 h-5 w-5" />
             Instagram Feed
           </h3>
-          
+
           <div className="grid grid-cols-3 gap-2">
             {instagramImages.map((imageUrl, index) => (
               <img 
@@ -124,7 +140,7 @@ export default function Sidebar() {
               />
             ))}
           </div>
-          
+
           <div className="mt-4 text-center">
             <a href="#" className="text-teal-primary font-lato font-semibold hover:underline">
               @minaonthemap

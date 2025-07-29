@@ -18,9 +18,9 @@ export default function Footer() {
           <div>
             <div className="flex items-center mb-4">
               <img 
-                src="/attached_assets/Screenshot 2025-07-29 at 7.47.08 AM_1753800430764.png" 
+                src="/attached_assets/MinaOnTheMap Logo Audition_1753800500181.png" 
                 alt="Mina on the Map Logo" 
-                className="h-8 w-auto filter brightness-0 invert"
+                className="h-10 w-auto filter brightness-0 invert"
               />
             </div>
             <p className="font-merriweather text-sm text-gray-300 mb-4">

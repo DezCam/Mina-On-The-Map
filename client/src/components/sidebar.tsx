@@ -65,10 +65,10 @@ export default function Sidebar() {
         </CardContent>
       </Card>
 
-      {/* Blog Header with Logo */}
-      <Card className="bg-white rounded-2xl mb-6">
+      {/* Blog Header with Logo and Recent Posts */}
+      <Card className="bg-white rounded-2xl">
         <CardContent className="p-6">
-          <div className="relative">
+          <div className="relative mb-6">
             <div className="w-full h-48 bg-gradient-to-br from-pink-300 to-pink-400 rounded-lg flex items-center justify-center p-6">
               <img 
                 src="/mina-logo.png" 
@@ -77,12 +77,7 @@ export default function Sidebar() {
               />
             </div>
           </div>
-        </CardContent>
-      </Card>
 
-      {/* Recent Posts */}
-      <Card className="bg-white rounded-2xl">
-        <CardContent className="p-6">
           <h3 className="font-lato font-bold text-xl text-earth-brown mb-6">Recent Posts</h3>
 
           <div className="space-y-4">

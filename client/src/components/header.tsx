@@ -36,9 +36,8 @@ export default function Header() {
             <img 
               src="../../attached_assets/MinaOnTheMap Logo Audition_1753800066592.png" 
               alt="Mina on the Map Logo" 
-              className="w-16 h-16 mr-4 drop-shadow-md"
+              className="w-20 h-20 drop-shadow-md"
             />
-            <div className="font-lato font-bold text-2xl text-earth-brown">Mina on the Map</div>
           </div>
           
           {/* Desktop Navigation */}

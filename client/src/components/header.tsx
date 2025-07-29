@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
@@ -18,12 +19,12 @@ export default function Header() {
   });
 
   const navLinks = [
-    { href: "#", label: "Home" },
-    { href: "#destinations", label: "Destinations" },
-    { href: "#guides", label: "Travel Guides" },
-    { href: "#blog", label: "Blog" },
-    { href: "#about", label: "About" },
-    { href: "#contact", label: "Contact" },
+    { href: "/", label: "Home" },
+    { href: "/destinations", label: "Destinations" },
+    { href: "/travel-guides", label: "Travel Guides" },
+    { href: "/blog", label: "Blog" },
+    { href: "/about", label: "About" },
+    { href: "/contact", label: "Contact" },
   ];
 
   return (
@@ -33,24 +34,24 @@ export default function Header() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center">
+          <Link href="/" className="flex items-center">
             <img 
               src={logoImage} 
               alt="Mina on the Map Logo" 
               className="h-12 w-auto"
             />
-          </div>
+          </Link>
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.label}
                 href={link.href}
                 className="font-lato font-medium text-dark-brown hover:text-teal-primary transition-colors"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </nav>
           
@@ -71,13 +72,13 @@ export default function Header() {
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
               <div className="flex flex-col space-y-4 mt-6">
                 {navLinks.map((link) => (
-                  <a
+                  <Link
                     key={link.label}
                     href={link.href}
                     className="font-lato font-medium text-dark-brown hover:text-teal-primary transition-colors text-lg"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 ))}
                 <Button className="bg-teal-primary text-white px-6 py-3 rounded-full font-lato font-semibold hover:bg-teal-light transition-colors mt-6">
                   Plan Your Trip

@@ -77,7 +77,7 @@ export default function Sidebar() {
             />
             <div className="absolute inset-0 bg-black bg-opacity-30 rounded-lg flex items-center justify-center">
               <img 
-                src="/attached_assets/MinaOnTheMap Logo Audition_1753812327910.png" 
+                src="/mina-logo.png" 
                 alt="Mina on the Map Logo" 
                 className="h-20 w-auto"
               />

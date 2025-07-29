@@ -22,12 +22,18 @@ export default function HeroSection() {
   return (
     <section className="relative h-96 md:h-[600px] overflow-hidden">
       {/* Hero Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: "url('/hero-image.jpg')"
-        }}
-      />
+      <div className="absolute inset-0">
+        <img 
+          src="/hero-image.jpg" 
+          alt="Coastal landscape background"
+          className="w-full h-full object-cover"
+          onError={(e) => {
+            console.error('Hero image failed to load:', e);
+            e.currentTarget.style.display = 'none';
+          }}
+          onLoad={() => console.log('Hero image loaded successfully')}
+        />
+      </div>
       <div className="absolute inset-0 bg-black bg-opacity-40" />
       
       <div className="relative z-10 h-full flex items-center justify-center text-center px-4">

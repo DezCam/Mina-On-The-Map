@@ -2,6 +2,11 @@ export type ThemeMode = "light" | "dark" | "auto";
 export type EffectiveTheme = Exclude<ThemeMode, "auto">;
 
 export const THEME_STORAGE_KEY = "mina-on-the-map:appearance";
+export const appearanceOptions: { value: ThemeMode; label: string }[] = [
+  { value: "light", label: "Light" },
+  { value: "dark", label: "Dark" },
+  { value: "auto", label: "Auto" },
+];
 
 export function isThemeMode(value: string | null): value is ThemeMode {
   return value === "light" || value === "dark" || value === "auto";

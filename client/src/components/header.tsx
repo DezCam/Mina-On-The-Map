@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "wouter";
+import AppearanceToggle from "@/components/appearance-toggle";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
@@ -61,41 +62,43 @@ export default function Header() {
             ))}
           </nav>
           
-          {/* CTA Button */}
-          <div className="hidden md:block">
+          <div className="flex items-center gap-3">
+            <AppearanceToggle />
+
             <Button className="bg-teal-primary text-white px-6 py-2 rounded-full font-lato font-semibold hover:bg-teal-light transition-colors">
-              Plan Your Trip
+              <span className="hidden md:inline">Plan Your Trip</span>
+              <span className="md:hidden">Plan</span>
             </Button>
-          </div>
-          
-          {/* Mobile Menu */}
-          <Sheet>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="md:hidden">
-                <Menu className="h-6 w-6" />
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-              <div className="flex flex-col space-y-4 mt-6">
-                {navLinks.map((link) => (
-                  <Link
-                    key={link.label}
-                    href={link.href}
-                    className={`text-lg font-lato font-medium transition-colors ${
-                      location === link.href
-                        ? "text-teal-primary"
-                        : "text-dark-brown hover:text-teal-primary"
-                    }`}
-                  >
-                    {link.label}
-                  </Link>
-                ))}
-                <Button className="bg-teal-primary text-white px-6 py-3 rounded-full font-lato font-semibold hover:bg-teal-light transition-colors mt-6">
-                  Plan Your Trip
+            
+            {/* Mobile Menu */}
+            <Sheet>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon" className="md:hidden">
+                  <Menu className="h-6 w-6" />
                 </Button>
-              </div>
-            </SheetContent>
-          </Sheet>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+                <div className="mt-6 flex flex-col space-y-4">
+                  {navLinks.map((link) => (
+                    <Link
+                      key={link.label}
+                      href={link.href}
+                      className={`text-lg font-lato font-medium transition-colors ${
+                        location === link.href
+                          ? "text-teal-primary"
+                          : "text-dark-brown hover:text-teal-primary"
+                      }`}
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                  <Button className="mt-6 bg-teal-primary px-6 py-3 font-lato font-semibold text-white transition-colors hover:bg-teal-light">
+                    Plan Your Trip
+                  </Button>
+                </div>
+              </SheetContent>
+            </Sheet>
+          </div>
         </div>
       </div>
     </header>

@@ -8,13 +8,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { useTheme } from "@/components/theme-provider";
-import type { ThemeMode } from "@/lib/theme";
-
-const appearanceOptions: { value: ThemeMode; label: string }[] = [
-  { value: "light", label: "Light" },
-  { value: "dark", label: "Dark" },
-  { value: "auto", label: "Auto" },
-];
+import { appearanceOptions, type ThemeMode } from "@/lib/theme";
 
 export default function AppearanceSettings() {
   const { mode, setMode } = useTheme();

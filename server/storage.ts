@@ -1,6 +1,10 @@
 import { type TravelGuide, type InsertTravelGuide, type Destination, type InsertDestination, type BlogPost, type InsertBlogPost } from "@shared/schema";
 import { randomUUID } from "crypto";
 
+function getTimestamp(value: Date | null) {
+  return value ? new Date(value).getTime() : 0;
+}
+
 export interface IStorage {
   // Travel Guides
   getTravelGuides(): Promise<TravelGuide[]>;
@@ -138,6 +142,7 @@ export class MemStorage implements IStorage {
         title: "Best Time to Visit Patagonia",
         excerpt: "Everything you need to know about timing your Patagonia adventure for the best weather and wildlife viewing.",
         imageUrl: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=80&h=80",
+        readTime: "5 min read",
         publishedAt: new Date("2024-12-15"),
       },
       {
@@ -145,6 +150,7 @@ export class MemStorage implements IStorage {
         title: "Food Markets Around the World",
         excerpt: "Discover the most vibrant food markets across different continents and what makes each one special.",
         imageUrl: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=80&h=80",
+        readTime: "4 min read",
         publishedAt: new Date("2024-12-12"),
       },
       {
@@ -152,6 +158,7 @@ export class MemStorage implements IStorage {
         title: "Winter Cabin Retreats",
         excerpt: "Cozy cabin getaways perfect for escaping the winter blues and reconnecting with nature.",
         imageUrl: "https://images.unsplash.com/photo-1518611012118-696072aa579a?ixlib=rb-4.0.3&auto=format&fit=crop&w=80&h=80",
+        readTime: "6 min read",
         publishedAt: new Date("2024-12-10"),
       },
     ];
@@ -161,7 +168,7 @@ export class MemStorage implements IStorage {
 
   async getTravelGuides(): Promise<TravelGuide[]> {
     return Array.from(this.travelGuides.values()).sort((a, b) => 
-      new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+      getTimestamp(b.createdAt) - getTimestamp(a.createdAt)
     );
   }
 
@@ -175,7 +182,12 @@ export class MemStorage implements IStorage {
 
   async createTravelGuide(insertGuide: InsertTravelGuide): Promise<TravelGuide> {
     const id = randomUUID();
-    const guide: TravelGuide = { ...insertGuide, id, createdAt: new Date() };
+    const guide: TravelGuide = {
+      ...insertGuide,
+      id,
+      createdAt: new Date(),
+      isFeatured: insertGuide.isFeatured ?? false,
+    };
     this.travelGuides.set(id, guide);
     return guide;
   }
@@ -197,13 +209,13 @@ export class MemStorage implements IStorage {
 
   async getBlogPosts(): Promise<BlogPost[]> {
     return Array.from(this.blogPosts.values()).sort((a, b) => 
-      new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
+      getTimestamp(b.publishedAt) - getTimestamp(a.publishedAt)
     );
   }
 
   async getRecentPosts(): Promise<BlogPost[]> {
     return Array.from(this.blogPosts.values())
-      .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
+      .sort((a, b) => getTimestamp(b.publishedAt) - getTimestamp(a.publishedAt))
       .slice(0, 3);
   }
 

@@ -6,6 +6,18 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { Calendar, Clock } from "lucide-react";
 import type { BlogPost } from "@shared/schema";
 
+function formatPublishedDate(publishedAt: BlogPost["publishedAt"]) {
+  if (!publishedAt) {
+    return "Coming soon";
+  }
+
+  return new Date(publishedAt).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+}
+
 export default function Blog() {
   const { data: blogPosts, isLoading } = useQuery<BlogPost[]>({
     queryKey: ["/api/blog-posts/recent"],
@@ -63,13 +75,7 @@ export default function Blog() {
                     <div className="flex items-center justify-between text-sm text-gray-500">
                       <div className="flex items-center">
                         <Calendar className="h-4 w-4 mr-1" />
-                        <span>
-                          {new Date(post.publishedAt).toLocaleDateString('en-US', {
-                            year: 'numeric',
-                            month: 'long',
-                            day: 'numeric'
-                          })}
-                        </span>
+                        <span>{formatPublishedDate(post.publishedAt)}</span>
                       </div>
                       <div className="flex items-center">
                         <Clock className="h-4 w-4 mr-1" />

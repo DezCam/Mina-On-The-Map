@@ -8,6 +8,18 @@ import { Instagram } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import type { BlogPost } from "@shared/schema";
 
+function formatPublishedDate(publishedAt: BlogPost["publishedAt"]) {
+  if (!publishedAt) {
+    return "Coming soon";
+  }
+
+  return new Date(publishedAt).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+}
+
 export default function Sidebar() {
   const [email, setEmail] = useState("");
   const { toast } = useToast();
@@ -102,11 +114,7 @@ export default function Sidebar() {
                   <div className="flex-1">
                     <h4 className="font-lato font-semibold text-sm text-earth-brown mb-1">{post.title}</h4>
                     <p className="text-xs text-gray-500">
-                      {new Date(post.publishedAt).toLocaleDateString('en-US', {
-                        year: 'numeric',
-                        month: 'long',
-                        day: 'numeric'
-                      })}
+                      {formatPublishedDate(post.publishedAt)}
                     </p>
                   </div>
                 </article>

@@ -1,35 +1,37 @@
-import { useState } from "react";
-import { Link } from "wouter";
+import { useEffect, useState } from "react";
+import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import logoImage from "@assets/MinaOnTheMap Logo Audition_1753800500181.png";
 
+const navLinks = [
+  { href: "/", label: "Home" },
+  { href: "/destinations", label: "Destinations" },
+  { href: "/travel-guides", label: "Travel Guides" },
+  { href: "/products", label: "Products" },
+  { href: "/blog", label: "Blog" },
+  { href: "/about", label: "About" },
+  { href: "/contact", label: "Contact" },
+];
+
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [location] = useLocation();
 
-  // Handle scroll effect
-  useState(() => {
+  useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 100);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  });
-
-  const navLinks = [
-    { href: "/", label: "Home" },
-    { href: "/destinations", label: "Destinations" },
-    { href: "/travel-guides", label: "Travel Guides" },
-    { href: "/blog", label: "Blog" },
-    { href: "/about", label: "About" },
-    { href: "/contact", label: "Contact" },
-  ];
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <header className={`sticky top-0 z-50 bg-white shadow-lg border-b-2 border-sandy-tan transition-all duration-300 ${
-      isScrolled ? 'bg-opacity-95 backdrop-blur-sm' : ''
+    <header className={`sticky top-0 z-50 border-b-2 border-sandy-tan bg-white shadow-lg transition-all duration-300 ${
+      isScrolled ? "bg-opacity-95 backdrop-blur-sm" : ""
     }`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
@@ -48,7 +50,11 @@ export default function Header() {
               <Link
                 key={link.label}
                 href={link.href}
-                className="font-lato font-medium text-dark-brown hover:text-teal-primary transition-colors"
+                className={`font-lato font-medium transition-colors ${
+                  location === link.href
+                    ? "text-teal-primary"
+                    : "text-dark-brown hover:text-teal-primary"
+                }`}
               >
                 {link.label}
               </Link>
@@ -75,7 +81,11 @@ export default function Header() {
                   <Link
                     key={link.label}
                     href={link.href}
-                    className="font-lato font-medium text-dark-brown hover:text-teal-primary transition-colors text-lg"
+                    className={`text-lg font-lato font-medium transition-colors ${
+                      location === link.href
+                        ? "text-teal-primary"
+                        : "text-dark-brown hover:text-teal-primary"
+                    }`}
                   >
                     {link.label}
                   </Link>

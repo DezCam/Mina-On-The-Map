@@ -1,5 +1,6 @@
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import AppearanceSettings from "@/components/appearance-settings";
 import { Card, CardContent } from "@/components/ui/card";
 import { MapPin, Camera, Heart, Compass } from "lucide-react";
 
@@ -118,6 +119,20 @@ export default function About() {
                 <div className="font-merriweather text-gray-600">Memories Made</div>
               </div>
             </div>
+          </div>
+        </section>
+
+        <section className="mb-16">
+          <div className="mx-auto max-w-3xl">
+            <div className="mb-8 text-center">
+              <h2 className="font-lato font-bold text-3xl text-earth-brown">
+                Preferences
+              </h2>
+              <p className="mt-3 font-merriweather text-gray-600">
+                Personalize how the site looks while keeping Mina&apos;s travel style intact.
+              </p>
+            </div>
+            <AppearanceSettings />
           </div>
         </section>
 

@@ -1,6 +1,7 @@
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import {
   Card,
   CardContent,
@@ -8,32 +9,26 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { ArrowRight, Compass, Map, ShoppingBag, Sparkles } from "lucide-react";
+import { Compass, Map, Sparkles } from "lucide-react";
 
 const products = [
   {
-    title: "City Weekend Guide Kit",
+    title: "Japan Complete Travel Guide",
     description:
-      "A curated planning bundle for quick getaways with neighborhood notes, packing prompts, and itinerary starters.",
-    cta: "View Product",
-    accent: "from-[#D98B75] via-[#F3E8D6] to-[#D8D9B8]",
+      "Japan Complete Travel Guide Coming Soon",
+    badge: "Coming Soon",
+    cta: "Coming Soon",
+    accent: "from-[#8FB3C9] via-[#D5E3E8] to-[#F3E8D6]",
     icon: Map,
   },
   {
-    title: "Travel Creator Essentials",
+    title: "Turkey Complete Travel Guide",
     description:
-      "A placeholder collection for the tools Mina reaches for when documenting routes, stories, and favorite finds on the road.",
-    cta: "Coming Soon",
-    accent: "from-[#8FB3C9] via-[#D5E3E8] to-[#F3E8D6]",
+      "Turkey Complete Travel Guide Coming Soon",
+    badge: "Coming Soon",
+    cta: "Notify Me Soon",
+    accent: "from-[#D98B75] via-[#F3E8D6] to-[#D8D9B8]",
     icon: Compass,
-  },
-  {
-    title: "Favorite Finds Collection",
-    description:
-      "A future roundup of travel-inspired staples, thoughtful gifts, and practical products worth packing or gifting.",
-    cta: "Coming Soon",
-    accent: "from-[#C1A57F] via-[#F3E8D6] to-[#D8D9B8]",
-    icon: ShoppingBag,
   },
 ];
 
@@ -54,17 +49,14 @@ export default function Products() {
                 Products
               </h1>
               <p className="mt-6 max-w-2xl font-merriweather text-lg leading-relaxed text-gray-700 md:text-xl">
-                Explore curated travel-inspired products, tools, and future favorites from Mina On The Map.
+                A preview of premium downloadable travel guides that are in progress for Mina On The Map.
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
-                <Button className="rounded-full bg-earth-brown px-6 py-6 font-lato font-semibold text-white hover:bg-teal-primary">
-                  Browse Favorites
-                </Button>
                 <Button
                   variant="outline"
                   className="rounded-full border-sandy-tan px-6 py-6 font-lato font-semibold text-earth-brown hover:bg-warm-beige"
                 >
-                  Join the Waitlist
+                  Guide Collection Preview
                 </Button>
               </div>
             </div>
@@ -82,11 +74,11 @@ export default function Products() {
                 </div>
                 <div className="rounded-[1.5rem] bg-gradient-to-br from-white/20 via-white/10 to-transparent p-6">
                   <div className="mb-6 flex h-20 w-20 items-center justify-center rounded-3xl bg-white text-earth-brown shadow-lg">
-                    <ShoppingBag className="h-10 w-10" />
+                    <Map className="h-10 w-10" />
                   </div>
-                  <p className="font-lato text-2xl font-bold">Travel-ready essentials</p>
+                  <p className="font-lato text-2xl font-bold">Complete travel guides</p>
                   <p className="mt-3 font-merriweather text-sm leading-7 text-white/85">
-                    Thoughtful guides, planning tools, and future merchandise shaped around Mina&apos;s travel voice.
+                    Premium downloadable guide products are being prepared in the new botanical travel collection.
                   </p>
                 </div>
               </div>
@@ -101,15 +93,15 @@ export default function Products() {
                 Launching Soon
               </p>
               <h2 className="mt-3 font-lato text-3xl font-bold text-earth-brown md:text-4xl">
-                Placeholder product lineup
+                Coming soon travel guides
               </h2>
             </div>
             <p className="max-w-2xl font-merriweather text-gray-600">
-              These cards are wired into the site now and ready to be replaced with real product photos, descriptions, and destination-specific offers.
+              These guide cards are styled as premium products but kept inactive until the downloadable guides are ready.
             </p>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+          <div className="grid gap-8 md:grid-cols-2">
             {products.map((product) => {
               const Icon = product.icon;
 
@@ -122,9 +114,9 @@ export default function Products() {
                     className={`relative flex h-64 items-center justify-center bg-gradient-to-br ${product.accent}`}
                   >
                     <div className="absolute inset-x-8 top-8 flex items-center justify-between">
-                      <span className="rounded-full bg-white/80 px-3 py-1 font-lato text-xs font-bold uppercase tracking-[0.18em] text-earth-brown shadow-sm">
-                        Product Preview
-                      </span>
+                      <Badge className="rounded-full border border-[#F3E8D6] bg-white/80 px-3 py-1 font-lato text-xs font-bold uppercase tracking-[0.18em] text-earth-brown shadow-sm">
+                        {product.badge}
+                      </Badge>
                       <Sparkles className="h-4 w-4 text-earth-brown/70" />
                     </div>
                     <div className="flex h-28 w-28 items-center justify-center rounded-[2rem] bg-white shadow-xl">
@@ -132,7 +124,7 @@ export default function Products() {
                     </div>
                     <div className="absolute bottom-8 left-8 right-8 rounded-3xl border border-white/70 bg-white/80 px-4 py-3 backdrop-blur-sm">
                       <p className="font-merriweather text-sm text-gray-600">
-                        Product image placeholder
+                        Premium downloadable guide
                       </p>
                     </div>
                   </div>
@@ -145,12 +137,14 @@ export default function Products() {
                     </CardDescription>
                   </CardHeader>
                   <CardContent className="flex items-center justify-between gap-4">
-                    <span className="font-lato text-sm font-semibold uppercase tracking-[0.18em] text-ocean-blue">
-                      Mina approved
+                    <span className="font-lato text-sm font-semibold uppercase tracking-[0.18em] text-terracotta-clay">
+                      Guide preview
                     </span>
-                    <Button className="rounded-full bg-earth-brown px-5 font-lato font-semibold text-white hover:bg-dark-brown">
+                    <Button
+                      disabled
+                      className="rounded-full bg-earth-brown/80 px-5 font-lato font-semibold text-white opacity-100 hover:bg-earth-brown/80 disabled:cursor-default disabled:opacity-100"
+                    >
                       {product.cta}
-                      <ArrowRight className="h-4 w-4" />
                     </Button>
                   </CardContent>
                 </Card>

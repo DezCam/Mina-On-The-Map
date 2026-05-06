@@ -12,13 +12,6 @@ export default function About() {
       <main className="container mx-auto px-4 py-12">
         {/* Hero Section */}
         <section className="text-center mb-16">
-          <div className="mb-8">
-            <img 
-              src="/mina-logo.png" 
-              alt="Mina on the Map Logo" 
-              className="w-40 h-40 mx-auto mb-6"
-            />
-          </div>
           <h1 className="section-title mb-6 font-lato text-4xl font-black md:text-6xl">
             About Mina
           </h1>

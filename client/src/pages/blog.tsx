@@ -30,13 +30,6 @@ export default function Blog() {
       <main className="container mx-auto px-4 py-12">
         {/* Page Header */}
         <section className="text-center mb-16">
-          <div className="mb-8">
-            <img 
-              src="/mina-logo.png" 
-              alt="Mina on the Map Logo" 
-              className="w-32 h-32 mx-auto mb-6"
-            />
-          </div>
           <h1 className="section-title mb-6 font-lato text-4xl font-black md:text-6xl">
             Mina's Travel Blog
           </h1>

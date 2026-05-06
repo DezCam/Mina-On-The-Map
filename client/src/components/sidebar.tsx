@@ -77,16 +77,20 @@ export default function Sidebar() {
         </CardContent>
       </Card>
 
-      {/* Blog Header with Logo and Recent Posts */}
+      {/* Blog Header and Recent Posts */}
       <Card className="botanical-card rounded-2xl">
         <CardContent className="p-6">
           <div className="relative mb-6">
-            <div className="flex h-48 w-full items-center justify-center rounded-lg bg-[linear-gradient(160deg,rgba(217,139,117,0.92),rgba(183,101,60,0.94),rgba(31,61,42,0.78))] p-6">
-              <img 
-                src="/mina-logo.png" 
-                alt="Mina on the Map Logo" 
-                className="w-full max-w-[180px] h-auto"
-              />
+            <div className="flex h-40 w-full flex-col items-center justify-center rounded-lg bg-[linear-gradient(160deg,rgba(217,139,117,0.92),rgba(183,101,60,0.94),rgba(31,61,42,0.78))] p-6 text-center">
+              <p className="font-lato text-xs font-bold uppercase tracking-[0.24em] text-[#F3E8D6]/80">
+                Mina On The Map
+              </p>
+              <h3 className="mt-3 font-lato text-2xl font-black text-white">
+                Stories from the road
+              </h3>
+              <p className="mt-2 max-w-xs font-merriweather text-sm text-[#F3E8D6]">
+                Fresh reflections, travel notes, and destination highlights.
+              </p>
             </div>
           </div>
 

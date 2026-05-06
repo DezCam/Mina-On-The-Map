@@ -4,7 +4,6 @@ import AppearanceToggle from "@/components/appearance-toggle";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
-import logoImage from "@assets/MinaOnTheMap Logo Audition_1753800500181.png";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -36,13 +35,10 @@ export default function Header() {
     }`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
           <Link href="/" className="flex items-center">
-            <img 
-              src={logoImage} 
-              alt="Mina on the Map Logo" 
-              className="h-12 w-auto"
-            />
+            <div className="font-lato text-xl font-black uppercase tracking-[0.18em] text-[#F3E8D6]">
+              Mina On The Map
+            </div>
           </Link>
           
           {/* Desktop Navigation */}

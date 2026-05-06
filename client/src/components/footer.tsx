@@ -1,5 +1,4 @@
 import { Instagram, Facebook, Youtube, MapPin, Mail, Clock } from "lucide-react";
-import logoImage from "@assets/MinaOnTheMap Logo Audition_1753800500181.png";
 
 export default function Footer() {
   const quickLinks = [
@@ -17,12 +16,8 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           {/* About Section */}
           <div>
-            <div className="flex items-center mb-4">
-              <img 
-                src={logoImage} 
-                alt="Mina on the Map Logo" 
-                className="h-10 w-auto filter brightness-0 invert"
-              />
+            <div className="mb-4 font-lato text-xl font-black uppercase tracking-[0.18em] text-[#F3E8D6]">
+              Mina On The Map
             </div>
             <p className="mb-4 font-merriweather text-sm text-[#D8D9B8]">
               Your trusted companion for authentic travel experiences and unforgettable adventures around the globe.

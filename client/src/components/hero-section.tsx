@@ -52,9 +52,6 @@ export default function HeroSection() {
       
       <div className="relative z-10 h-full flex items-center justify-center text-center px-4">
         <div className="max-w-4xl">
-          <div className="mb-5 inline-flex items-center rounded-full border border-white/25 bg-white/10 px-4 py-2 font-lato text-sm font-semibold uppercase tracking-[0.18em] text-[#F3E8D6] backdrop-blur-sm">
-            Botanical Terracotta Journeys
-          </div>
           <h1 className="font-lato font-black text-4xl md:text-6xl text-white mb-6 leading-tight">
             Your Compass to Unforgettable Adventures
           </h1>

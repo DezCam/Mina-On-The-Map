@@ -134,7 +134,7 @@ export default function Contact() {
                     <div>
                       <h4 className="font-lato font-semibold text-gray-800 mb-1">Email</h4>
                       <p className="font-merriweather text-gray-600">hello@minaonthemap.com</p>
-                      <p className="font-merriweather text-sm text-gray-500 mt-1">I typically respond within 24 hours</p>
+                      <p className="font-merriweather text-sm text-gray-500 mt-1">Response timing will be shared here.</p>
                     </div>
                   </div>
                   
@@ -176,7 +176,7 @@ export default function Contact() {
                   
                   <div>
                     <h4 className="font-lato font-semibold text-gray-800 mb-2">Collaboration Opportunities</h4>
-                    <p className="font-merriweather text-sm text-gray-600">I'm always open to partnering with travel brands and destinations that align with my values.</p>
+                    <p className="font-merriweather text-sm text-gray-600">Partnership details can be added here.</p>
                   </div>
                   
                   <div>
@@ -192,7 +192,7 @@ export default function Contact() {
               <CardContent className="p-8 text-center">
                 <MessageCircle className="h-12 w-12 mx-auto mb-4 opacity-80" />
                 <h3 className="font-lato font-bold text-xl mb-2">Response Time</h3>
-                <p className="font-merriweather">I read every message personally and aim to respond within 24 hours. Your travel questions and stories mean the world to me!</p>
+                <p className="font-merriweather">A response message can be added here when details are finalized.</p>
               </CardContent>
             </Card>
           </div>

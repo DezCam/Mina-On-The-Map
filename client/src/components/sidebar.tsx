@@ -8,18 +8,6 @@ import { Instagram } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import type { BlogPost } from "@shared/schema";
 
-function formatPublishedDate(publishedAt: BlogPost["publishedAt"]) {
-  if (!publishedAt) {
-    return "Coming soon";
-  }
-
-  return new Date(publishedAt).toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
-}
-
 export default function Sidebar() {
   const [email, setEmail] = useState("");
   const { toast } = useToast();
@@ -54,7 +42,7 @@ export default function Sidebar() {
       <Card className="terracotta-panel mb-8 rounded-2xl border-none shadow-[0_18px_38px_rgba(183,101,60,0.24)]">
         <CardContent className="p-8">
           <h3 className="font-lato font-bold text-2xl mb-4">Join the Map Tribe</h3>
-          <p className="font-merriweather mb-6">Get exclusive travel tips, destination guides, and adventure inspiration delivered to your inbox weekly.</p>
+          <p className="font-merriweather mb-6">Sign up to hear about future updates.</p>
 
           <form onSubmit={handleNewsletterSubmit} className="space-y-4">
             <Input
@@ -73,7 +61,7 @@ export default function Sidebar() {
             </Button>
           </form>
 
-          <p className="text-xs mt-4 opacity-80">No spam, unsubscribe anytime. Read our privacy policy.</p>
+          <p className="text-xs mt-4 opacity-80">Privacy details coming soon.</p>
         </CardContent>
       </Card>
 
@@ -117,9 +105,6 @@ export default function Sidebar() {
                   />
                   <div className="flex-1">
                     <h4 className="font-lato font-semibold text-sm text-earth-brown mb-1">{post.title}</h4>
-                    <p className="text-xs text-gray-500">
-                      {formatPublishedDate(post.publishedAt)}
-                    </p>
                   </div>
                 </article>
               ))

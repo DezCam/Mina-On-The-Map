@@ -28,8 +28,7 @@ export default function TravelGuides() {
             Travel Guides
           </h1>
           <p className="font-merriweather text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
-            Comprehensive travel guides crafted with local expertise and insider knowledge. 
-            Discover the best places to visit, where to stay, and hidden gems off the beaten path.
+            Browse travel guides and destination notes.
           </p>
         </section>
 

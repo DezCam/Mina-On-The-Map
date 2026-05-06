@@ -73,7 +73,7 @@ export default function Destinations() {
         <section className="ocean-panel rounded-2xl p-12 text-center shadow-[0_20px_40px_rgba(18,58,90,0.24)]">
           <h2 className="font-lato font-bold text-3xl mb-4">Ready to Plan Your Adventure?</h2>
           <p className="font-merriweather text-lg mb-8 max-w-2xl mx-auto">
-            Get personalized destination recommendations and expert travel advice tailored to your interests.
+            Explore destinations and keep an eye out for future planning resources.
           </p>
           <button className="rounded-full bg-[#F3E8D6] px-8 py-4 font-lato font-semibold text-[#123A5A] transition-colors hover:bg-[#D5E3E8]">
             Start Planning

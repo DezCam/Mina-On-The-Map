@@ -20,7 +20,7 @@ export default function Footer() {
               Mina On The Map
             </div>
             <p className="mb-4 font-merriweather text-sm text-[#D8D9B8]">
-              Your trusted companion for authentic travel experiences and unforgettable adventures around the globe.
+              Travel notes, guides, and stories from Mina On The Map.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-[#D5E3E8] transition-colors hover:text-[#E1C44A]">
@@ -73,11 +73,11 @@ export default function Footer() {
               </div>
               <div className="flex items-center">
                 <MapPin className="mr-3 h-4 w-4 text-[#8FB3C9]" />
-                Based in California, USA
+                Contact details coming soon
               </div>
               <div className="flex items-center">
                 <Clock className="mr-3 h-4 w-4 text-[#8FB3C9]" />
-                Response within 24 hours
+                Updates shared here
               </div>
             </div>
           </div>
@@ -85,7 +85,7 @@ export default function Footer() {
 
         <div className="mt-8 border-t border-[#3F6F35] pt-8 text-center">
           <p className="font-merriweather text-sm text-[#D8D9B8]">
-            © 2024 Mina on the Map. All rights reserved. | 
+            © Mina On The Map. | 
             <a href="#" className="ml-1 text-[#8FB3C9] transition-colors hover:text-[#E1C44A]">Privacy Policy</a> | 
             <a href="#" className="ml-1 text-[#8FB3C9] transition-colors hover:text-[#E1C44A]">Terms of Service</a>
           </p>

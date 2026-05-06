@@ -46,7 +46,6 @@ export default function FeaturedGuide() {
             <Badge className="mr-3 rounded-full bg-terracotta-clay px-3 py-1 text-sm font-lato font-semibold text-white">
               Featured Guide
             </Badge>
-            <span className="text-gray-500 font-lato text-sm">Updated December 2024</span>
           </div>
           
           <h2 className="font-lato font-bold text-3xl md:text-4xl text-earth-brown mb-4">

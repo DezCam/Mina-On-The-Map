@@ -33,7 +33,7 @@ export default function HeroSection() {
             Your Compass to Unforgettable Adventures
           </h1>
           <p className="mx-auto mb-8 max-w-2xl font-merriweather text-lg text-[#F3E8D6] md:text-xl">
-            Discover hidden gems, authentic experiences, and expert travel tips from around the world
+            Discover travel stories, destination ideas, and future guides.
           </p>
           
           {/* Search Bar */}

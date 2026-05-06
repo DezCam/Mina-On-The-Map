@@ -21,34 +21,11 @@ export default function HeroSection() {
 
   return (
     <section className="relative h-96 overflow-hidden md:h-[600px]">
-      {/* Hero Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: "url('/hero-image.jpg')",
-          backgroundColor: '#8B7355'
-        }}
-      >
-        <img 
-          src="/hero-image.jpg" 
-          alt="Coastal landscape background"
-          className="w-full h-full object-cover opacity-0"
-          onLoad={(e) => {
-            console.log('Hero image loaded, making visible');
-            e.currentTarget.style.opacity = '1';
-            if (e.currentTarget.parentElement) {
-              e.currentTarget.parentElement.style.backgroundImage = "url('/hero-image.jpg')";
-            }
-          }}
-          onError={(e) => {
-            console.error('Hero image failed to load:', e);
-            if (e.currentTarget.parentElement) {
-              e.currentTarget.parentElement.style.backgroundColor = '#C1A57F';
-            }
-          }}
-        />
-      </div>
-      <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(31,61,42,0.82),rgba(18,58,90,0.38),rgba(183,101,60,0.42))]" />
+      <div className="absolute inset-0 bg-[linear-gradient(135deg,#1F3D2A_0%,#123A5A_52%,#B7653C_100%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(199,221,101,0.22),transparent_26%),radial-gradient(circle_at_top_right,rgba(143,179,201,0.24),transparent_30%),radial-gradient(circle_at_bottom_left,rgba(217,139,117,0.22),transparent_28%)]" />
+      <div className="absolute -left-20 top-24 h-64 w-64 rounded-full border border-[#D8D9B8]/25 bg-[#8FBF4D]/10 blur-3xl" />
+      <div className="absolute right-0 top-10 h-80 w-80 rounded-full bg-[#8FB3C9]/12 blur-3xl" />
+      <div className="absolute bottom-[-4rem] left-1/2 h-56 w-[42rem] -translate-x-1/2 rounded-[100%] border border-[#F3E8D6]/10 bg-[#F3E8D6]/5 blur-2xl" />
       
       <div className="relative z-10 h-full flex items-center justify-center text-center px-4">
         <div className="max-w-4xl">

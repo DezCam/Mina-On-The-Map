@@ -14,10 +14,10 @@ export default function AppearanceSettings() {
   const { mode, setMode } = useTheme();
 
   return (
-    <Card className="bg-white rounded-2xl shadow-lg">
+    <Card className="botanical-card rounded-2xl">
       <CardContent className="p-8">
         <div className="mb-6 flex items-start gap-4">
-          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-teal-primary text-white">
+          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-earth-brown text-white">
             <Palette className="h-6 w-6" />
           </div>
           <div>
@@ -35,7 +35,7 @@ export default function AppearanceSettings() {
             Appearance
           </label>
           <Select value={mode} onValueChange={(value) => setMode(value as ThemeMode)}>
-            <SelectTrigger className="h-12 rounded-xl border-gray-300 bg-white font-lato text-base text-dark-brown">
+            <SelectTrigger className="h-12 rounded-xl border-gray-300 bg-[#F3E8D6] font-lato text-base text-dark-brown">
               <SelectValue placeholder="Select appearance" />
             </SelectTrigger>
             <SelectContent>

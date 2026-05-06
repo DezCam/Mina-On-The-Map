@@ -20,7 +20,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative h-96 md:h-[600px] overflow-hidden bg-gray-300">
+    <section className="relative h-96 overflow-hidden md:h-[600px]">
       {/* Hero Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -43,35 +43,38 @@ export default function HeroSection() {
           onError={(e) => {
             console.error('Hero image failed to load:', e);
             if (e.currentTarget.parentElement) {
-              e.currentTarget.parentElement.style.backgroundColor = '#8B7355';
+              e.currentTarget.parentElement.style.backgroundColor = '#C1A57F';
             }
           }}
         />
       </div>
-      <div className="absolute inset-0 bg-black bg-opacity-30" />
+      <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(31,61,42,0.82),rgba(18,58,90,0.38),rgba(183,101,60,0.42))]" />
       
       <div className="relative z-10 h-full flex items-center justify-center text-center px-4">
         <div className="max-w-4xl">
+          <div className="mb-5 inline-flex items-center rounded-full border border-white/25 bg-white/10 px-4 py-2 font-lato text-sm font-semibold uppercase tracking-[0.18em] text-[#F3E8D6] backdrop-blur-sm">
+            Botanical Terracotta Journeys
+          </div>
           <h1 className="font-lato font-black text-4xl md:text-6xl text-white mb-6 leading-tight">
             Your Compass to Unforgettable Adventures
           </h1>
-          <p className="font-merriweather text-lg md:text-xl text-white mb-8 max-w-2xl mx-auto">
+          <p className="mx-auto mb-8 max-w-2xl font-merriweather text-lg text-[#F3E8D6] md:text-xl">
             Discover hidden gems, authentic experiences, and expert travel tips from around the world
           </p>
           
           {/* Search Bar */}
-          <form onSubmit={handleSearch} className="max-w-md mx-auto bg-white rounded-full shadow-lg overflow-hidden">
+          <form onSubmit={handleSearch} className="mx-auto max-w-md overflow-hidden rounded-full border border-[#C1A57F] bg-[#F3E8D6] shadow-[0_18px_40px_rgba(42,33,27,0.18)]">
             <div className="flex">
               <Input
                 type="text"
                 placeholder="Search Guides or Destinations"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="flex-1 px-6 py-4 font-lato text-dark-brown border-0 focus:ring-0 rounded-l-full"
+                className="flex-1 rounded-l-full border-0 bg-transparent px-6 py-4 font-lato text-dark-brown placeholder:text-muted-olive focus-visible:ring-0"
               />
               <Button 
                 type="submit"
-                className="bg-teal-primary text-white px-6 py-4 hover:bg-teal-light transition-colors rounded-r-full"
+                className="rounded-r-full bg-earth-brown px-6 py-4 text-white transition-colors hover:bg-teal-primary"
               >
                 <Search className="h-5 w-5" />
               </Button>

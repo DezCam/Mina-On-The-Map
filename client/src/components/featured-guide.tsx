@@ -12,7 +12,7 @@ export default function FeaturedGuide() {
   if (isLoading) {
     return (
       <section className="mb-16">
-        <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+        <div className="botanical-card overflow-hidden rounded-2xl">
           <Skeleton className="w-full h-64 md:h-80" />
           <div className="p-8">
             <Skeleton className="h-4 w-32 mb-4" />
@@ -34,7 +34,7 @@ export default function FeaturedGuide() {
 
   return (
     <section className="mb-16">
-      <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+      <div className="botanical-card overflow-hidden rounded-2xl">
         <img 
           src={featuredGuide.imageUrl} 
           alt={featuredGuide.title}
@@ -43,7 +43,7 @@ export default function FeaturedGuide() {
         
         <div className="p-8">
           <div className="flex items-center mb-4">
-            <Badge className="bg-teal-primary text-white px-3 py-1 rounded-full text-sm font-lato font-semibold mr-3">
+            <Badge className="mr-3 rounded-full bg-terracotta-clay px-3 py-1 text-sm font-lato font-semibold text-white">
               Featured Guide
             </Badge>
             <span className="text-gray-500 font-lato text-sm">Updated December 2024</span>
@@ -58,12 +58,12 @@ export default function FeaturedGuide() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button className="bg-earth-brown text-white px-8 py-3 rounded-full font-lato font-semibold hover:bg-opacity-90 transition-colors">
+            <Button className="rounded-full bg-earth-brown px-8 py-3 font-lato font-semibold text-white transition-colors hover:bg-teal-primary">
               Download the Guide Now
             </Button>
             <Button 
               variant="outline"
-              className="border-2 border-earth-brown text-earth-brown px-8 py-3 rounded-full font-lato font-semibold hover:bg-earth-brown hover:text-white transition-colors"
+              className="rounded-full border-2 border-wood px-8 py-3 font-lato font-semibold text-earth-brown transition-colors hover:bg-warm-beige"
             >
               Read More
             </Button>

@@ -28,7 +28,7 @@ export default function AppearanceToggle() {
         <Button
           type="button"
           variant="outline"
-          className="h-10 rounded-full border-sandy-tan bg-white/95 px-3 text-earth-brown shadow-sm hover:bg-warm-beige focus-visible:ring-teal-primary dark:bg-card dark:hover:bg-accent"
+          className="h-10 rounded-full border-sandy-tan bg-[#F3E8D6]/95 px-3 text-earth-brown shadow-sm hover:bg-warm-beige focus-visible:ring-ring dark:bg-card dark:hover:bg-accent"
           aria-label={`Appearance: ${mode}`}
         >
           <ActiveIcon className="h-4 w-4" />
@@ -40,7 +40,7 @@ export default function AppearanceToggle() {
       </DropdownMenuTrigger>
       <DropdownMenuContent
         align="end"
-        className="w-56 rounded-2xl border-sandy-tan bg-white p-2 shadow-lg dark:bg-popover"
+        className="w-56 rounded-2xl border-sandy-tan bg-[#F3E8D6] p-2 shadow-lg dark:bg-popover"
       >
         <DropdownMenuLabel className="font-lato text-earth-brown">
           Appearance
@@ -59,10 +59,10 @@ export default function AppearanceToggle() {
                 value={option.value}
                 className="rounded-xl px-8 py-2 font-lato text-dark-brown"
               >
-                <OptionIcon className="h-4 w-4 text-teal-primary" />
+                <OptionIcon className="h-4 w-4 text-ocean-blue" />
                 <span>{option.label}</span>
                 {mode === option.value ? (
-                  <Check className="ml-auto h-4 w-4 text-teal-primary" />
+                  <Check className="ml-auto h-4 w-4 text-ocean-blue" />
                 ) : null}
               </DropdownMenuRadioItem>
             );

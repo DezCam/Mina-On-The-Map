@@ -11,7 +11,7 @@ export default function TravelGuidesGrid() {
   if (isLoading) {
     return (
       <section id="guides" className="mb-16">
-        <h2 className="font-lato font-bold text-3xl text-earth-brown mb-8 text-center">Travel Themes & Destinations</h2>
+        <h2 className="section-title mb-8 text-center font-lato text-3xl font-bold">Travel Themes & Destinations</h2>
         <div className="grid md:grid-cols-2 gap-8">
           {[...Array(4)].map((_, i) => (
             <Card key={i} className="overflow-hidden">
@@ -35,11 +35,11 @@ export default function TravelGuidesGrid() {
 
   return (
     <section id="guides" className="mb-16">
-      <h2 className="font-lato font-bold text-3xl text-earth-brown mb-8 text-center">Travel Themes & Destinations</h2>
+      <h2 className="section-title mb-8 text-center font-lato text-3xl font-bold">Travel Themes & Destinations</h2>
 
       <div className="grid md:grid-cols-2 gap-8">
         {nonFeaturedGuides.map((guide) => (
-          <Card key={guide.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+          <Card key={guide.id} className="botanical-card overflow-hidden rounded-xl transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl">
             <img 
               src={guide.imageUrl} 
               alt={guide.title}
@@ -49,8 +49,8 @@ export default function TravelGuidesGrid() {
               <h3 className="font-lato font-bold text-xl text-earth-brown mb-3">{guide.title}</h3>
               <p className="font-merriweather text-gray-600 mb-4">{guide.excerpt}</p>
               <div className="flex items-center justify-between">
-                <span className="text-teal-primary font-lato text-sm">{guide.readTime}</span>
-                <a href="#" className="text-earth-brown font-semibold hover:text-teal-primary transition-colors">
+                <span className="font-lato text-sm text-terracotta-clay">{guide.readTime}</span>
+                <a href="#" className="font-semibold text-earth-brown transition-colors hover:text-ocean-blue">
                   Read More →
                 </a>
               </div>

@@ -6,7 +6,7 @@ import { MapPin, Camera, Heart, Compass } from "lucide-react";
 
 export default function About() {
   return (
-    <div className="min-h-screen bg-cream-light">
+    <div className="min-h-screen bg-cream">
       <Header />
       
       <main className="container mx-auto px-4 py-12">
@@ -19,7 +19,7 @@ export default function About() {
               className="w-40 h-40 mx-auto mb-6"
             />
           </div>
-          <h1 className="font-lato font-black text-4xl md:text-6xl text-earth-brown mb-6">
+          <h1 className="section-title mb-6 font-lato text-4xl font-black md:text-6xl">
             About Mina
           </h1>
           <p className="font-merriweather text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
@@ -39,7 +39,7 @@ export default function About() {
               />
             </div>
             <div>
-              <h2 className="font-lato font-bold text-3xl text-earth-brown mb-6">My Story</h2>
+              <h2 className="section-title mb-6 font-lato text-3xl font-bold">My Story</h2>
               <div className="space-y-4 font-merriweather text-gray-700 leading-relaxed">
                 <p>
                   What started as a solo backpacking trip through Europe has turned into a lifelong passion 
@@ -61,34 +61,34 @@ export default function About() {
 
         {/* Values */}
         <section className="mb-16">
-          <h2 className="font-lato font-bold text-3xl text-earth-brown mb-12 text-center">What Drives Me</h2>
+          <h2 className="section-title mb-12 text-center font-lato text-3xl font-bold">What Drives Me</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card className="bg-white rounded-xl shadow-lg text-center p-8">
-              <div className="w-16 h-16 bg-teal-primary rounded-full flex items-center justify-center mx-auto mb-4">
+            <Card className="botanical-card p-8 text-center rounded-xl">
+              <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-earth-brown">
                 <Compass className="h-8 w-8 text-white" />
               </div>
               <h3 className="font-lato font-bold text-xl text-earth-brown mb-3">Authentic Experiences</h3>
               <p className="font-merriweather text-gray-600">Seeking genuine connections and real cultural immersion beyond tourist attractions.</p>
             </Card>
 
-            <Card className="bg-white rounded-xl shadow-lg text-center p-8">
-              <div className="w-16 h-16 bg-teal-primary rounded-full flex items-center justify-center mx-auto mb-4">
+            <Card className="botanical-card p-8 text-center rounded-xl">
+              <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-terracotta-clay">
                 <Heart className="h-8 w-8 text-white" />
               </div>
               <h3 className="font-lato font-bold text-xl text-earth-brown mb-3">Responsible Travel</h3>
               <p className="font-merriweather text-gray-600">Supporting local communities and traveling sustainably to preserve our planet.</p>
             </Card>
 
-            <Card className="bg-white rounded-xl shadow-lg text-center p-8">
-              <div className="w-16 h-16 bg-teal-primary rounded-full flex items-center justify-center mx-auto mb-4">
+            <Card className="botanical-card p-8 text-center rounded-xl">
+              <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-ocean-blue">
                 <Camera className="h-8 w-8 text-white" />
               </div>
               <h3 className="font-lato font-bold text-xl text-earth-brown mb-3">Visual Storytelling</h3>
               <p className="font-merriweather text-gray-600">Capturing moments that inspire others to embark on their own adventures.</p>
             </Card>
 
-            <Card className="bg-white rounded-xl shadow-lg text-center p-8">
-              <div className="w-16 h-16 bg-teal-primary rounded-full flex items-center justify-center mx-auto mb-4">
+            <Card className="botanical-card p-8 text-center rounded-xl">
+              <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-salt-pink">
                 <MapPin className="h-8 w-8 text-white" />
               </div>
               <h3 className="font-lato font-bold text-xl text-earth-brown mb-3">Hidden Gems</h3>
@@ -99,23 +99,23 @@ export default function About() {
 
         {/* Stats */}
         <section className="mb-16">
-          <div className="bg-white rounded-2xl shadow-lg p-12">
-            <h2 className="font-lato font-bold text-3xl text-earth-brown mb-8 text-center">My Journey in Numbers</h2>
+          <div className="sage-panel rounded-2xl p-12">
+            <h2 className="section-title mb-8 text-center font-lato text-3xl font-bold">My Journey in Numbers</h2>
             <div className="grid md:grid-cols-4 gap-8 text-center">
               <div>
-                <div className="text-4xl font-lato font-black text-teal-primary mb-2">50+</div>
+                <div className="mb-2 font-lato text-4xl font-black text-earth-brown">50+</div>
                 <div className="font-merriweather text-gray-600">Countries Explored</div>
               </div>
               <div>
-                <div className="text-4xl font-lato font-black text-teal-primary mb-2">200+</div>
+                <div className="mb-2 font-lato text-4xl font-black text-terracotta-clay">200+</div>
                 <div className="font-merriweather text-gray-600">Cities Visited</div>
               </div>
               <div>
-                <div className="text-4xl font-lato font-black text-teal-primary mb-2">10</div>
+                <div className="mb-2 font-lato text-4xl font-black text-ocean-blue">10</div>
                 <div className="font-merriweather text-gray-600">Years Traveling</div>
               </div>
               <div>
-                <div className="text-4xl font-lato font-black text-teal-primary mb-2">∞</div>
+                <div className="mb-2 font-lato text-4xl font-black text-[#E1C44A]">∞</div>
                 <div className="font-merriweather text-gray-600">Memories Made</div>
               </div>
             </div>
@@ -125,7 +125,7 @@ export default function About() {
         <section className="mb-16">
           <div className="mx-auto max-w-3xl">
             <div className="mb-8 text-center">
-              <h2 className="font-lato font-bold text-3xl text-earth-brown">
+                <h2 className="section-title font-lato text-3xl font-bold">
                 Preferences
               </h2>
               <p className="mt-3 font-merriweather text-gray-600">
@@ -137,13 +137,13 @@ export default function About() {
         </section>
 
         {/* Call to Action */}
-        <section className="text-center bg-teal-primary text-white rounded-2xl p-12">
+        <section className="terracotta-panel rounded-2xl p-12 text-center shadow-[0_20px_40px_rgba(183,101,60,0.22)]">
           <h2 className="font-lato font-bold text-3xl mb-4">Let's Explore Together</h2>
           <p className="font-merriweather text-lg mb-8 max-w-2xl mx-auto">
             Have a question about a destination? Want travel advice? Or just want to share your own adventure? 
             I'd love to hear from you!
           </p>
-          <button className="bg-white text-teal-primary px-8 py-4 rounded-full font-lato font-semibold hover:bg-gray-100 transition-colors">
+          <button className="rounded-full bg-earth-brown px-8 py-4 font-lato font-semibold text-white transition-colors hover:bg-teal-primary">
             Get in Touch
           </button>
         </section>

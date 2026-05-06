@@ -5,66 +5,83 @@
 @tailwind utilities;
 
 :root {
-  --background: hsl(60, 43%, 96%);
-  --foreground: hsl(25, 67%, 15%);
-  --muted: hsl(60, 4.8%, 95.9%);
-  --muted-foreground: hsl(25, 5.3%, 44.7%);
-  --popover: hsl(0, 0%, 100%);
-  --popover-foreground: hsl(25, 67%, 15%);
-  --card: hsl(0, 0%, 100%);
-  --card-foreground: hsl(25, 67%, 15%);
-  --border: hsl(20, 5.9%, 90%);
-  --input: hsl(20, 5.9%, 90%);
-  --primary: hsl(180, 100%, 27%);
-  --primary-foreground: hsl(0, 0%, 100%);
-  --secondary: hsl(60, 4.8%, 95.9%);
-  --secondary-foreground: hsl(24, 9.8%, 10%);
-  --accent: hsl(60, 4.8%, 95.9%);
-  --accent-foreground: hsl(24, 9.8%, 10%);
-  --destructive: hsl(0, 84.2%, 60.2%);
-  --destructive-foreground: hsl(60, 9.1%, 97.8%);
-  --ring: hsl(25, 67%, 15%);
-  --radius: 0.5rem;
-  
-  /* Custom travel blog colors */
-  --earth-brown: hsl(25, 67%, 27%);
-  --sandy-tan: hsl(40, 50%, 74%);
-  --teal-primary: hsl(180, 100%, 27%);
-  --teal-light: hsl(177, 66%, 41%);
-  --warm-beige: hsl(60, 29%, 94%);
-  --cream: hsl(60, 43%, 96%);
-  --cream-light: hsl(48, 33%, 97%);
-  --dark-brown: hsl(25, 67%, 15%);
+  --primary-dark-green: #1F3D2A;
+  --primary-green: #3F6F35;
+  --soft-leaf-green: #8FBF4D;
+  --lime-variegation: #C7DD65;
+  --terracotta-clay: #B7653C;
+  --salt-pink: #D98B75;
+  --natural-wood: #C1A57F;
+  --warm-cream: #F3E8D6;
+  --sage-mist: #D8D9B8;
+  --root-brown: #2A211B;
+  --muted-olive: #6F715D;
+  --highlight-yellow: #E1C44A;
+  --ceramic-blue: #1F5F9F;
+  --deep-ocean: #123A5A;
+  --porcelain-blue: #8FB3C9;
+  --misty-turtle-blue: #D5E3E8;
+
+  --background: var(--warm-cream);
+  --foreground: var(--root-brown);
+  --muted: var(--sage-mist);
+  --muted-foreground: var(--muted-olive);
+  --popover: var(--warm-cream);
+  --popover-foreground: var(--root-brown);
+  --card: #fbf4e8;
+  --card-foreground: var(--root-brown);
+  --border: color-mix(in srgb, var(--natural-wood) 60%, white);
+  --input: color-mix(in srgb, var(--natural-wood) 60%, white);
+  --primary: var(--primary-dark-green);
+  --primary-foreground: var(--warm-cream);
+  --secondary: var(--sage-mist);
+  --secondary-foreground: var(--root-brown);
+  --accent: var(--salt-pink);
+  --accent-foreground: var(--root-brown);
+  --destructive: var(--terracotta-clay);
+  --destructive-foreground: var(--warm-cream);
+  --ring: var(--primary-green);
+  --radius: 0.75rem;
+
+  --earth-brown: var(--primary-dark-green);
+  --sandy-tan: var(--natural-wood);
+  --teal-primary: var(--primary-green);
+  --teal-light: var(--soft-leaf-green);
+  --warm-beige: var(--sage-mist);
+  --cream: var(--warm-cream);
+  --cream-light: #f7efe3;
+  --dark-brown: var(--root-brown);
 }
 
 .dark {
-  --background: hsl(24, 22%, 10%);
-  --foreground: hsl(46, 35%, 94%);
-  --muted: hsl(25, 17%, 18%);
-  --muted-foreground: hsl(39, 17%, 74%);
-  --popover: hsl(24, 20%, 12%);
-  --popover-foreground: hsl(46, 35%, 94%);
-  --card: hsl(24, 18%, 14%);
-  --card-foreground: hsl(46, 35%, 94%);
-  --border: hsl(24, 16%, 24%);
-  --input: hsl(24, 16%, 24%);
-  --primary: hsl(177, 66%, 41%);
-  --primary-foreground: hsl(24, 22%, 10%);
-  --secondary: hsl(25, 17%, 18%);
-  --secondary-foreground: hsl(46, 35%, 94%);
-  --accent: hsl(25, 17%, 18%);
-  --accent-foreground: hsl(46, 35%, 94%);
-  --destructive: hsl(0, 62.8%, 30.6%);
-  --destructive-foreground: hsl(0, 0%, 98%);
-  --ring: hsl(39, 33%, 78%);
-  --earth-brown: hsl(42, 56%, 83%);
-  --sandy-tan: hsl(37, 29%, 46%);
-  --teal-primary: hsl(177, 66%, 41%);
-  --teal-light: hsl(177, 56%, 55%);
-  --warm-beige: hsl(25, 17%, 18%);
-  --cream: hsl(24, 22%, 10%);
-  --cream-light: hsl(24, 20%, 12%);
-  --dark-brown: hsl(46, 35%, 94%);
+  --background: var(--primary-dark-green);
+  --foreground: var(--warm-cream);
+  --muted: color-mix(in srgb, var(--deep-ocean) 86%, black);
+  --muted-foreground: var(--misty-turtle-blue);
+  --popover: color-mix(in srgb, var(--deep-ocean) 80%, black);
+  --popover-foreground: var(--warm-cream);
+  --card: color-mix(in srgb, var(--deep-ocean) 82%, black);
+  --card-foreground: var(--warm-cream);
+  --border: color-mix(in srgb, var(--primary-green) 60%, black);
+  --input: color-mix(in srgb, var(--primary-green) 60%, black);
+  --primary: var(--soft-leaf-green);
+  --primary-foreground: var(--root-brown);
+  --secondary: color-mix(in srgb, var(--deep-ocean) 84%, black);
+  --secondary-foreground: var(--warm-cream);
+  --accent: var(--terracotta-clay);
+  --accent-foreground: var(--warm-cream);
+  --destructive: var(--salt-pink);
+  --destructive-foreground: var(--root-brown);
+  --ring: var(--lime-variegation);
+
+  --earth-brown: var(--warm-cream);
+  --sandy-tan: var(--natural-wood);
+  --teal-primary: var(--soft-leaf-green);
+  --teal-light: var(--lime-variegation);
+  --warm-beige: color-mix(in srgb, var(--deep-ocean) 75%, black);
+  --cream: var(--primary-dark-green);
+  --cream-light: color-mix(in srgb, var(--deep-ocean) 70%, black);
+  --dark-brown: var(--warm-cream);
 }
 
 @layer base {
@@ -72,13 +89,26 @@
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply font-serif antialiased bg-background text-foreground;
     font-family: 'Merriweather', serif;
+    background-image:
+      radial-gradient(circle at top left, rgb(217 139 117 / 0.16), transparent 30%),
+      radial-gradient(circle at right 18%, rgb(143 179 201 / 0.16), transparent 24%),
+      linear-gradient(180deg, rgb(243 232 214 / 0.97), rgb(247 239 227 / 0.95));
+    background-attachment: fixed;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Lato', sans-serif;
+  }
+
+  a {
+    color: inherit;
   }
 
   .font-lato {
@@ -91,7 +121,8 @@
 }
 
 @layer components {
-  .earth-brown {
+  .earth-brown,
+  .text-earth-brown {
     color: var(--earth-brown);
   }
 
@@ -99,7 +130,8 @@
     background-color: var(--earth-brown);
   }
 
-  .sandy-tan {
+  .sandy-tan,
+  .text-sandy-tan {
     color: var(--sandy-tan);
   }
 
@@ -107,7 +139,8 @@
     background-color: var(--sandy-tan);
   }
 
-  .teal-primary {
+  .teal-primary,
+  .text-teal-primary {
     color: var(--teal-primary);
   }
 
@@ -115,7 +148,8 @@
     background-color: var(--teal-primary);
   }
 
-  .teal-light {
+  .teal-light,
+  .text-teal-light {
     color: var(--teal-light);
   }
 
@@ -123,7 +157,8 @@
     background-color: var(--teal-light);
   }
 
-  .warm-beige {
+  .warm-beige,
+  .text-warm-beige {
     color: var(--warm-beige);
   }
 
@@ -143,7 +178,8 @@
     background-color: var(--cream-light);
   }
 
-  .dark-brown {
+  .dark-brown,
+  .text-dark-brown {
     color: var(--dark-brown);
   }
 
@@ -151,46 +187,142 @@
     background-color: var(--dark-brown);
   }
 
-  .text-earth-brown {
-    color: var(--earth-brown);
+  .text-muted-olive {
+    color: var(--muted-olive);
   }
 
-  .text-sandy-tan {
-    color: var(--sandy-tan);
+  .text-terracotta-clay {
+    color: var(--terracotta-clay);
   }
 
-  .text-teal-primary {
-    color: var(--teal-primary);
+  .bg-terracotta-clay {
+    background-color: var(--terracotta-clay);
   }
 
-  .text-teal-light {
-    color: var(--teal-light);
+  .text-salt-pink {
+    color: var(--salt-pink);
   }
 
-  .text-warm-beige {
-    color: var(--warm-beige);
+  .bg-salt-pink {
+    background-color: var(--salt-pink);
   }
 
-  .text-dark-brown {
-    color: var(--dark-brown);
+  .text-ocean-blue {
+    color: var(--ceramic-blue);
   }
 
-  .border-sandy-tan {
-    border-color: var(--sandy-tan);
+  .bg-ocean-blue {
+    background-color: var(--ceramic-blue);
+  }
+
+  .text-deep-ocean {
+    color: var(--deep-ocean);
+  }
+
+  .bg-deep-ocean {
+    background-color: var(--deep-ocean);
+  }
+
+  .bg-misty-turtle-blue {
+    background-color: var(--misty-turtle-blue);
+  }
+
+  .border-sandy-tan,
+  .border-wood {
+    border-color: var(--natural-wood);
+  }
+
+  .border-ocean-blue {
+    border-color: var(--ceramic-blue);
+  }
+
+  .botanical-card {
+    border: 1px solid rgb(193 165 127 / 0.48);
+    background:
+      linear-gradient(180deg, rgb(251 244 232 / 0.98), rgb(243 232 214 / 0.94)),
+      radial-gradient(circle at top right, rgb(217 139 117 / 0.12), transparent 32%);
+    box-shadow: 0 18px 40px rgb(42 33 27 / 0.08);
+  }
+
+  .sage-panel {
+    border: 1px solid rgb(193 165 127 / 0.45);
+    background: linear-gradient(145deg, rgb(216 217 184 / 0.88), rgb(243 232 214 / 0.84));
+    box-shadow: 0 18px 34px rgb(42 33 27 / 0.06);
+  }
+
+  .ocean-panel {
+    background: linear-gradient(160deg, rgb(31 95 159 / 0.96), rgb(18 58 90 / 0.96));
+    color: var(--warm-cream);
+  }
+
+  .terracotta-panel {
+    background: linear-gradient(160deg, rgb(183 101 60 / 0.96), rgb(217 139 117 / 0.92));
+    color: var(--warm-cream);
+  }
+
+  .section-title {
+    color: var(--primary-dark-green);
+    letter-spacing: -0.02em;
   }
 
   .hover\:bg-teal-light:hover {
     background-color: var(--teal-light);
   }
 
+  .hover\:bg-teal-primary:hover {
+    background-color: var(--teal-primary);
+  }
+
+  .hover\:bg-warm-beige:hover {
+    background-color: var(--warm-beige);
+  }
+
+  .hover\:bg-dark-brown:hover {
+    background-color: var(--dark-brown);
+  }
+
+  .hover\:bg-salt-pink:hover {
+    background-color: var(--salt-pink);
+  }
+
   .hover\:text-teal-primary:hover {
     color: var(--teal-primary);
   }
+
+  .hover\:text-ocean-blue:hover {
+    color: var(--ceramic-blue);
+  }
+}
+
+.bg-white {
+  background-color: var(--card);
+}
+
+.text-gray-900,
+.text-gray-800,
+.text-gray-700 {
+  color: var(--root-brown);
+}
+
+.text-gray-600,
+.text-gray-500 {
+  color: var(--muted-olive);
+}
+
+.border-gray-300,
+.border-gray-600 {
+  border-color: rgb(193 165 127 / 0.65);
+}
+
+.hover\:bg-gray-100:hover {
+  background-color: rgb(216 217 184 / 0.55);
 }
 
 .dark body {
-  background-color: var(--background);
-  color: var(--foreground);
+  background-image:
+    radial-gradient(circle at top left, rgb(217 139 117 / 0.14), transparent 28%),
+    radial-gradient(circle at right 18%, rgb(143 179 201 / 0.12), transparent 24%),
+    linear-gradient(180deg, rgb(31 61 42 / 0.98), rgb(18 58 90 / 0.92));
 }
 
 .dark .bg-white {
@@ -201,7 +333,7 @@
 .dark .text-gray-700,
 .dark .text-gray-600,
 .dark .text-gray-500 {
-  color: hsl(39, 17%, 78%);
+  color: var(--misty-turtle-blue);
 }
 
 .dark .border-gray-300,
@@ -210,5 +342,5 @@
 }
 
 .dark .hover\:bg-gray-100:hover {
-  background-color: hsl(24, 16%, 20%);
+  background-color: rgb(31 95 159 / 0.18);
 }

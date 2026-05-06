@@ -24,7 +24,7 @@ export default function Blog() {
   });
 
   return (
-    <div className="min-h-screen bg-cream-light">
+    <div className="min-h-screen bg-cream">
       <Header />
       
       <main className="container mx-auto px-4 py-12">
@@ -37,7 +37,7 @@ export default function Blog() {
               className="w-32 h-32 mx-auto mb-6"
             />
           </div>
-          <h1 className="font-lato font-black text-4xl md:text-6xl text-earth-brown mb-6">
+          <h1 className="section-title mb-6 font-lato text-4xl font-black md:text-6xl">
             Mina's Travel Blog
           </h1>
           <p className="font-merriweather text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
@@ -51,7 +51,7 @@ export default function Blog() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {isLoading ? (
               [...Array(6)].map((_, i) => (
-                <Card key={i} className="bg-white rounded-xl shadow-lg overflow-hidden">
+                <Card key={i} className="botanical-card overflow-hidden rounded-xl">
                   <Skeleton className="w-full h-48" />
                   <CardContent className="p-6">
                     <Skeleton className="h-6 w-3/4 mb-3" />
@@ -63,7 +63,7 @@ export default function Blog() {
               ))
             ) : (
               blogPosts?.map((post) => (
-                <Card key={post.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                <Card key={post.id} className="botanical-card overflow-hidden rounded-xl transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl">
                   <img 
                     src={post.imageUrl} 
                     alt={post.title}
@@ -83,7 +83,7 @@ export default function Blog() {
                       </div>
                     </div>
                     <div className="mt-4">
-                      <a href="#" className="text-earth-brown font-semibold hover:text-teal-primary transition-colors">
+                      <a href="#" className="font-semibold text-earth-brown transition-colors hover:text-ocean-blue">
                         Read More →
                       </a>
                     </div>
@@ -95,7 +95,7 @@ export default function Blog() {
         </section>
 
         {/* Newsletter Signup */}
-        <section className="text-center bg-teal-primary text-white rounded-2xl p-12">
+        <section className="terracotta-panel rounded-2xl p-12 text-center shadow-[0_20px_40px_rgba(183,101,60,0.22)]">
           <h2 className="font-lato font-bold text-3xl mb-4">Never Miss an Adventure</h2>
           <p className="font-merriweather text-lg mb-8 max-w-2xl mx-auto">
             Subscribe to get the latest travel stories, tips, and destination guides delivered straight to your inbox.
@@ -104,9 +104,9 @@ export default function Blog() {
             <input 
               type="email" 
               placeholder="Your email address"
-              className="flex-1 px-4 py-3 rounded-full text-gray-800 border-0"
+              className="flex-1 rounded-full border-0 bg-[#F3E8D6] px-4 py-3 text-dark-brown placeholder:text-muted-olive"
             />
-            <button className="bg-white text-teal-primary px-6 py-3 rounded-full font-lato font-semibold hover:bg-gray-100 transition-colors">
+            <button className="rounded-full bg-earth-brown px-6 py-3 font-lato font-semibold text-white transition-colors hover:bg-teal-primary">
               Subscribe
             </button>
           </div>

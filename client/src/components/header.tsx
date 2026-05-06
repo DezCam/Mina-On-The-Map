@@ -31,8 +31,8 @@ export default function Header() {
   }, []);
 
   return (
-    <header className={`sticky top-0 z-50 border-b-2 border-sandy-tan bg-white shadow-lg transition-all duration-300 ${
-      isScrolled ? "bg-opacity-95 backdrop-blur-sm" : ""
+    <header className={`sticky top-0 z-50 border-b border-sandy-tan bg-earth-brown shadow-lg transition-all duration-300 ${
+      isScrolled ? "bg-opacity-95 backdrop-blur-md" : ""
     }`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
@@ -53,8 +53,8 @@ export default function Header() {
                 href={link.href}
                 className={`font-lato font-medium transition-colors ${
                   location === link.href
-                    ? "text-teal-primary"
-                    : "text-dark-brown hover:text-teal-primary"
+                    ? "text-[#E1C44A]"
+                    : "text-[#F3E8D6] hover:text-[#C1A57F]"
                 }`}
               >
                 {link.label}
@@ -65,7 +65,7 @@ export default function Header() {
           <div className="flex items-center gap-3">
             <AppearanceToggle />
 
-            <Button className="bg-teal-primary text-white px-6 py-2 rounded-full font-lato font-semibold hover:bg-teal-light transition-colors">
+            <Button className="rounded-full bg-terracotta-clay px-6 py-2 font-lato font-semibold text-white transition-colors hover:bg-salt-pink">
               <span className="hidden md:inline">Plan Your Trip</span>
               <span className="md:hidden">Plan</span>
             </Button>
@@ -73,11 +73,11 @@ export default function Header() {
             {/* Mobile Menu */}
             <Sheet>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className="md:hidden">
+                <Button variant="ghost" size="icon" className="text-[#F3E8D6] hover:bg-white/10 hover:text-[#C1A57F] md:hidden">
                   <Menu className="h-6 w-6" />
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+              <SheetContent side="right" className="w-[300px] border-l border-sandy-tan bg-cream sm:w-[400px]">
                 <div className="mt-6 flex flex-col space-y-4">
                   {navLinks.map((link) => (
                     <Link
@@ -86,13 +86,13 @@ export default function Header() {
                       className={`text-lg font-lato font-medium transition-colors ${
                         location === link.href
                           ? "text-teal-primary"
-                          : "text-dark-brown hover:text-teal-primary"
+                          : "text-dark-brown hover:text-ocean-blue"
                       }`}
                     >
                       {link.label}
                     </Link>
                   ))}
-                  <Button className="mt-6 bg-teal-primary px-6 py-3 font-lato font-semibold text-white transition-colors hover:bg-teal-light">
+                  <Button className="mt-6 bg-earth-brown px-6 py-3 font-lato font-semibold text-white transition-colors hover:bg-teal-primary">
                     Plan Your Trip
                   </Button>
                 </div>

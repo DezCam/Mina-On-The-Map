@@ -10,7 +10,7 @@ export default function DestinationsSection() {
   if (isLoading) {
     return (
       <section id="destinations" className="mb-16">
-        <h2 className="font-lato font-bold text-3xl text-earth-brown mb-8 text-center">Top Destinations</h2>
+        <h2 className="section-title mb-8 text-center font-lato text-3xl font-bold">Top Destinations</h2>
         <div className="grid md:grid-cols-3 gap-6">
           {[...Array(3)].map((_, i) => (
             <div key={i} className="relative overflow-hidden rounded-xl">
@@ -24,20 +24,20 @@ export default function DestinationsSection() {
 
   return (
     <section id="destinations" className="mb-16">
-      <h2 className="font-lato font-bold text-3xl text-earth-brown mb-8 text-center">Top Destinations</h2>
+      <h2 className="section-title mb-8 text-center font-lato text-3xl font-bold">Top Destinations</h2>
       
       <div className="grid md:grid-cols-3 gap-6">
         {destinations?.map((destination) => (
-          <div key={destination.id} className="relative group overflow-hidden rounded-xl">
+          <div key={destination.id} className="group relative overflow-hidden rounded-xl border border-ocean-blue shadow-[0_16px_34px_rgba(18,58,90,0.14)]">
             <img 
               src={destination.imageUrl} 
               alt={destination.name}
               className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#123A5A]/90 via-[#1F5F9F]/20 to-transparent" />
             <div className="absolute bottom-4 left-4 text-white">
               <h3 className="font-lato font-bold text-lg">{destination.name}</h3>
-              <p className="text-sm opacity-90">{destination.description}</p>
+              <p className="text-sm text-[#D5E3E8]">{destination.description}</p>
             </div>
           </div>
         ))}

@@ -18,13 +18,13 @@ export default function TravelGuides() {
   });
 
   return (
-    <div className="min-h-screen bg-cream-light">
+    <div className="min-h-screen bg-cream">
       <Header />
       
       <main className="container mx-auto px-4 py-12">
         {/* Page Header */}
         <section className="text-center mb-16">
-          <h1 className="font-lato font-black text-4xl md:text-6xl text-earth-brown mb-6">
+          <h1 className="section-title mb-6 font-lato text-4xl font-black md:text-6xl">
             Travel Guides
           </h1>
           <p className="font-merriweather text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
@@ -36,7 +36,7 @@ export default function TravelGuides() {
         {/* Featured Guide */}
         {featuredGuide && (
           <section className="mb-16">
-            <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+            <div className="botanical-card overflow-hidden rounded-2xl">
               <div className="md:flex">
                 <div className="md:w-1/2">
                   <img 
@@ -47,7 +47,7 @@ export default function TravelGuides() {
                 </div>
                 <div className="md:w-1/2 p-8">
                   <div className="flex items-center mb-4">
-                    <Badge className="bg-teal-primary text-white px-3 py-1 rounded-full text-sm font-lato font-semibold mr-3">
+                    <Badge className="mr-3 rounded-full bg-terracotta-clay px-3 py-1 text-sm font-lato font-semibold text-white">
                       <Star className="h-3 w-3 mr-1" />
                       Featured Guide
                     </Badge>
@@ -65,16 +65,16 @@ export default function TravelGuides() {
                     <Clock className="h-4 w-4 text-gray-500 mr-2" />
                     <span className="text-gray-600 font-lato text-sm">{featuredGuide.readTime}</span>
                     <span className="mx-3 text-gray-400">•</span>
-                    <span className="text-teal-primary font-lato text-sm font-semibold">{featuredGuide.category}</span>
+                    <span className="font-lato text-sm font-semibold text-ocean-blue">{featuredGuide.category}</span>
                   </div>
                   
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <Button className="bg-earth-brown text-white px-8 py-3 rounded-full font-lato font-semibold hover:bg-opacity-90 transition-colors">
+                    <Button className="rounded-full bg-earth-brown px-8 py-3 font-lato font-semibold text-white transition-colors hover:bg-teal-primary">
                       Download Guide
                     </Button>
                     <Button 
                       variant="outline"
-                      className="border-2 border-earth-brown text-earth-brown px-8 py-3 rounded-full font-lato font-semibold hover:bg-earth-brown hover:text-white transition-colors"
+                      className="rounded-full border-2 border-wood px-8 py-3 font-lato font-semibold text-earth-brown transition-colors hover:bg-warm-beige"
                     >
                       Read Online
                     </Button>
@@ -87,12 +87,12 @@ export default function TravelGuides() {
 
         {/* All Guides Grid */}
         <section className="mb-16">
-          <h2 className="font-lato font-bold text-3xl text-earth-brown mb-8">All Travel Guides</h2>
+          <h2 className="section-title mb-8 font-lato text-3xl font-bold">All Travel Guides</h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {isLoading ? (
               [...Array(6)].map((_, i) => (
-                <Card key={i} className="bg-white rounded-xl shadow-lg overflow-hidden">
+                <Card key={i} className="botanical-card overflow-hidden rounded-xl">
                   <Skeleton className="w-full h-48" />
                   <CardContent className="p-6">
                     <Skeleton className="h-6 w-3/4 mb-3" />
@@ -104,7 +104,7 @@ export default function TravelGuides() {
               ))
             ) : (
               guides?.filter(guide => !guide.isFeatured).map((guide) => (
-                <Card key={guide.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                <Card key={guide.id} className="botanical-card overflow-hidden rounded-xl transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl">
                   <img 
                     src={guide.imageUrl} 
                     alt={guide.title}
@@ -112,7 +112,7 @@ export default function TravelGuides() {
                   />
                   <CardContent className="p-6">
                     <div className="flex items-center mb-3">
-                      <Badge className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs font-lato">
+                      <Badge className="rounded bg-warm-beige px-2 py-1 text-xs font-lato text-earth-brown">
                         {guide.category}
                       </Badge>
                     </div>
@@ -123,7 +123,7 @@ export default function TravelGuides() {
                         <Clock className="h-4 w-4 mr-1" />
                         <span>{guide.readTime}</span>
                       </div>
-                      <a href="#" className="text-earth-brown font-semibold hover:text-teal-primary transition-colors">
+                      <a href="#" className="font-semibold text-earth-brown transition-colors hover:text-ocean-blue">
                         Read More →
                       </a>
                     </div>

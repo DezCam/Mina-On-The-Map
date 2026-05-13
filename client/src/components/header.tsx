@@ -30,13 +30,13 @@ export default function Header() {
   }, []);
 
   return (
-    <header className={`sticky top-0 z-50 border-b border-sandy-tan bg-earth-brown shadow-lg transition-all duration-300 ${
+    <header className={`brand-surface sticky top-0 z-50 border-b border-sandy-tan shadow-lg transition-all duration-300 ${
       isScrolled ? "bg-opacity-95 backdrop-blur-md" : ""
     }`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center">
-            <div className="font-lato text-xl font-black uppercase tracking-[0.18em] text-[#F3E8D6]">
+            <div className="font-lato text-xl font-black uppercase tracking-[0.18em] text-earth-brown">
               Mina On The Map
             </div>
           </Link>
@@ -47,10 +47,10 @@ export default function Header() {
               <Link
                 key={link.label}
                 href={link.href}
-                className={`font-lato font-medium transition-colors ${
+                className={`nav-link font-lato font-medium transition-colors ${
                   location === link.href
-                    ? "text-[#E1C44A]"
-                    : "text-[#F3E8D6] hover:text-[#C1A57F]"
+                    ? "nav-link-active"
+                    : ""
                 }`}
               >
                 {link.label}
@@ -61,7 +61,7 @@ export default function Header() {
           <div className="flex items-center gap-3">
             <AppearanceToggle />
 
-            <Button className="rounded-full bg-terracotta-clay px-6 py-2 font-lato font-semibold text-white transition-colors hover:bg-salt-pink">
+            <Button className="brand-btn-primary rounded-full px-6 py-2 font-lato font-semibold transition-colors">
               <span className="hidden md:inline">Plan Your Trip</span>
               <span className="md:hidden">Plan</span>
             </Button>
@@ -69,26 +69,26 @@ export default function Header() {
             {/* Mobile Menu */}
             <Sheet>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className="text-[#F3E8D6] hover:bg-white/10 hover:text-[#C1A57F] md:hidden">
+                <Button variant="ghost" size="icon" className="text-earth-brown hover:bg-white/10 hover:text-[#C1A57F] md:hidden">
                   <Menu className="h-6 w-6" />
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-[300px] border-l border-sandy-tan bg-cream sm:w-[400px]">
+              <SheetContent side="right" className="brand-surface w-[300px] border-l border-sandy-tan sm:w-[400px]">
                 <div className="mt-6 flex flex-col space-y-4">
                   {navLinks.map((link) => (
                     <Link
                       key={link.label}
                       href={link.href}
-                      className={`text-lg font-lato font-medium transition-colors ${
+                      className={`nav-link text-lg font-lato font-medium transition-colors ${
                         location === link.href
-                          ? "text-teal-primary"
-                          : "text-dark-brown hover:text-ocean-blue"
+                          ? "nav-link-active"
+                          : ""
                       }`}
                     >
                       {link.label}
                     </Link>
                   ))}
-                  <Button className="mt-6 bg-earth-brown px-6 py-3 font-lato font-semibold text-white transition-colors hover:bg-teal-primary">
+                  <Button className="brand-btn-primary mt-6 px-6 py-3 font-lato font-semibold transition-colors">
                     Plan Your Trip
                   </Button>
                 </div>

@@ -22,16 +22,37 @@
   --porcelain-blue: #8FB3C9;
   --misty-turtle-blue: #D5E3E8;
 
-  --background: var(--warm-cream);
-  --foreground: var(--root-brown);
+  --nav-link-color: var(--root-brown);
+  --nav-link-hover: var(--primary-green);
+  --text-primary: var(--root-brown);
+  --text-secondary: var(--muted-olive);
+  --text-muted: var(--natural-wood);
+  --bg-primary: var(--warm-cream);
+  --bg-secondary: var(--sage-mist);
+  --bg-card: #fbf4e8;
+  --bg-surface: #f7efe3;
+  --accent-terra: var(--terracotta-clay);
+  --accent-blue: var(--porcelain-blue);
+  --accent-green: var(--soft-leaf-green);
+  --accent-gold: var(--highlight-yellow);
+  --border-color: color-mix(in srgb, var(--natural-wood) 60%, white);
+  --divider-color: rgba(42, 33, 27, 0.12);
+  --btn-primary-bg: var(--primary-dark-green);
+  --btn-primary-text: var(--warm-cream);
+  --btn-secondary-bg: transparent;
+  --btn-secondary-border: var(--natural-wood);
+  --btn-secondary-text: var(--root-brown);
+
+  --background: var(--bg-primary);
+  --foreground: var(--text-primary);
   --muted: var(--sage-mist);
-  --muted-foreground: var(--muted-olive);
-  --popover: var(--warm-cream);
-  --popover-foreground: var(--root-brown);
-  --card: #fbf4e8;
-  --card-foreground: var(--root-brown);
-  --border: color-mix(in srgb, var(--natural-wood) 60%, white);
-  --input: color-mix(in srgb, var(--natural-wood) 60%, white);
+  --muted-foreground: var(--text-secondary);
+  --popover: var(--bg-primary);
+  --popover-foreground: var(--text-primary);
+  --card: var(--bg-card);
+  --card-foreground: var(--text-primary);
+  --border: var(--border-color);
+  --input: var(--border-color);
   --primary: var(--primary-dark-green);
   --primary-foreground: var(--warm-cream);
   --secondary: var(--sage-mist);
@@ -53,35 +74,63 @@
   --dark-brown: var(--root-brown);
 }
 
-.dark {
-  --background: var(--primary-dark-green);
-  --foreground: var(--warm-cream);
-  --muted: color-mix(in srgb, var(--deep-ocean) 86%, black);
-  --muted-foreground: var(--misty-turtle-blue);
-  --popover: color-mix(in srgb, var(--deep-ocean) 80%, black);
-  --popover-foreground: var(--warm-cream);
-  --card: color-mix(in srgb, var(--deep-ocean) 82%, black);
-  --card-foreground: var(--warm-cream);
-  --border: color-mix(in srgb, var(--primary-green) 60%, black);
-  --input: color-mix(in srgb, var(--primary-green) 60%, black);
-  --primary: var(--soft-leaf-green);
+[data-theme="dark"],
+.dark,
+.dark-mode {
+  --nav-link-color: #F3E8D6;
+  --nav-link-hover: #C7DD65;
+
+  --text-primary: #F3E8D6;
+  --text-secondary: #D8D9B8;
+  --text-muted: #C1A57F;
+
+  --bg-primary: #1A1A14;
+  --bg-secondary: #2A211B;
+  --bg-card: #1F3D2A;
+  --bg-surface: #253020;
+
+  --accent-terra: #D98B75;
+  --accent-blue: #8FB3C9;
+  --accent-green: #8FBF4D;
+  --accent-gold: #E1C44A;
+
+  --border-color: #3F6F35;
+  --divider-color: rgba(193, 165, 127, 0.2);
+
+  --btn-primary-bg: #B7653C;
+  --btn-primary-text: #F3E8D6;
+  --btn-secondary-bg: transparent;
+  --btn-secondary-border: #C1A57F;
+  --btn-secondary-text: #F3E8D6;
+
+  --background: var(--bg-primary);
+  --foreground: var(--text-primary);
+  --muted: var(--bg-surface);
+  --muted-foreground: var(--text-secondary);
+  --popover: var(--bg-card);
+  --popover-foreground: var(--text-primary);
+  --card: var(--bg-card);
+  --card-foreground: var(--text-primary);
+  --border: var(--border-color);
+  --input: var(--border-color);
+  --primary: var(--accent-green);
   --primary-foreground: var(--root-brown);
-  --secondary: color-mix(in srgb, var(--deep-ocean) 84%, black);
-  --secondary-foreground: var(--warm-cream);
-  --accent: var(--terracotta-clay);
-  --accent-foreground: var(--warm-cream);
+  --secondary: var(--bg-surface);
+  --secondary-foreground: var(--text-primary);
+  --accent: var(--accent-terra);
+  --accent-foreground: var(--text-primary);
   --destructive: var(--salt-pink);
   --destructive-foreground: var(--root-brown);
   --ring: var(--lime-variegation);
 
-  --earth-brown: var(--warm-cream);
+  --earth-brown: var(--bg-card);
   --sandy-tan: var(--natural-wood);
-  --teal-primary: var(--soft-leaf-green);
+  --teal-primary: var(--accent-green);
   --teal-light: var(--lime-variegation);
-  --warm-beige: color-mix(in srgb, var(--deep-ocean) 75%, black);
-  --cream: var(--primary-dark-green);
-  --cream-light: color-mix(in srgb, var(--deep-ocean) 70%, black);
-  --dark-brown: var(--warm-cream);
+  --warm-beige: var(--bg-surface);
+  --cream: var(--bg-primary);
+  --cream-light: var(--bg-secondary);
+  --dark-brown: var(--bg-secondary);
 }
 
 @layer base {
@@ -265,6 +314,47 @@
     letter-spacing: -0.02em;
   }
 
+  .brand-surface {
+    background-color: var(--bg-card);
+    color: var(--text-primary);
+  }
+
+  .brand-page {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+  }
+
+  .nav-link {
+    color: var(--nav-link-color);
+  }
+
+  .nav-link:hover {
+    color: var(--nav-link-hover);
+  }
+
+  .nav-link-active {
+    color: var(--accent-gold);
+  }
+
+  .brand-btn-primary {
+    background-color: var(--btn-primary-bg);
+    color: var(--btn-primary-text);
+  }
+
+  .brand-btn-primary:hover {
+    filter: brightness(1.06);
+  }
+
+  .brand-btn-secondary {
+    background-color: var(--btn-secondary-bg);
+    border-color: var(--btn-secondary-border);
+    color: var(--btn-secondary-text);
+  }
+
+  .brand-btn-secondary:hover {
+    background-color: rgb(193 165 127 / 0.12);
+  }
+
   .hover\:bg-teal-light:hover {
     background-color: var(--teal-light);
   }
@@ -329,11 +419,26 @@
   background-color: var(--card);
 }
 
+.dark .text-earth-brown,
+[data-theme="dark"] .text-earth-brown,
+.dark-mode .text-earth-brown,
+.dark .earth-brown,
+[data-theme="dark"] .earth-brown,
+.dark-mode .earth-brown,
+.dark .text-dark-brown,
+[data-theme="dark"] .text-dark-brown,
+.dark-mode .text-dark-brown,
+.dark .dark-brown,
+[data-theme="dark"] .dark-brown,
+.dark-mode .dark-brown {
+  color: var(--text-primary);
+}
+
 .dark .text-gray-800,
 .dark .text-gray-700,
 .dark .text-gray-600,
 .dark .text-gray-500 {
-  color: var(--misty-turtle-blue);
+  color: var(--text-secondary);
 }
 
 .dark .border-gray-300,

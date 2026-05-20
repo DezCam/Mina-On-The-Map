@@ -6,7 +6,7 @@ export default function Footer() {
   ];
 
   const categories = [
-    "Adventure Travel", "Cultural Experiences", "Food & Drink", 
+    "Adventure Travel", "Cultural Experiences", "Food & Drink",
     "Budget Travel", "Solo Travel", "Photography"
   ];
 
@@ -16,20 +16,20 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           {/* About Section */}
           <div>
-            <div className="mb-4 font-lato text-xl font-black uppercase tracking-[0.18em] text-[#F3E8D6]">
+            <div className="mb-4 font-lato text-xl font-black uppercase tracking-[0.18em] text-[#2A211B] dark:text-[#F3E8D6]">
               Mina On The Map
             </div>
-            <p className="mb-4 font-merriweather text-sm text-[#D8D9B8]">
+            <p className="mb-4 font-merriweather text-sm text-[#6F715D] dark:text-[#D8D9B8]">
               Travel notes, guides, and stories from Mina On The Map.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-[#D5E3E8] transition-colors hover:text-[#E1C44A]">
+              <a href="#" className="text-[#6F715D] transition-colors hover:text-[#B7653C] dark:text-[#D5E3E8] dark:hover:text-[#E1C44A]">
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="#" className="text-[#D5E3E8] transition-colors hover:text-[#E1C44A]">
+              <a href="#" className="text-[#6F715D] transition-colors hover:text-[#B7653C] dark:text-[#D5E3E8] dark:hover:text-[#E1C44A]">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="text-[#D5E3E8] transition-colors hover:text-[#E1C44A]">
+              <a href="#" className="text-[#6F715D] transition-colors hover:text-[#B7653C] dark:text-[#D5E3E8] dark:hover:text-[#E1C44A]">
                 <Youtube className="h-5 w-5" />
               </a>
             </div>
@@ -37,11 +37,11 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-lato font-bold text-lg mb-4">Quick Links</h3>
+            <h3 className="font-lato font-bold text-lg mb-4 text-[#2A211B] dark:text-[#F3E8D6]">Quick Links</h3>
             <ul className="space-y-2 font-merriweather text-sm">
               {quickLinks.map((link) => (
                 <li key={link}>
-                  <a href="#" className="text-[#D8D9B8] transition-colors hover:text-[#E1C44A]">
+                  <a href="#" className="text-[#3F6F35] transition-colors hover:text-[#B7653C] dark:text-[#D8D9B8] dark:hover:text-[#E1C44A]">
                     {link}
                   </a>
                 </li>
@@ -51,11 +51,11 @@ export default function Footer() {
 
           {/* Categories */}
           <div>
-            <h3 className="font-lato font-bold text-lg mb-4">Categories</h3>
+            <h3 className="font-lato font-bold text-lg mb-4 text-[#2A211B] dark:text-[#F3E8D6]">Categories</h3>
             <ul className="space-y-2 font-merriweather text-sm">
               {categories.map((category) => (
                 <li key={category}>
-                  <a href="#" className="text-[#D8D9B8] transition-colors hover:text-[#E1C44A]">
+                  <a href="#" className="text-[#3F6F35] transition-colors hover:text-[#B7653C] dark:text-[#D8D9B8] dark:hover:text-[#E1C44A]">
                     {category}
                   </a>
                 </li>
@@ -65,29 +65,29 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="font-lato font-bold text-lg mb-4">Get in Touch</h3>
-            <div className="space-y-3 font-merriweather text-sm text-[#D8D9B8]">
+            <h3 className="font-lato font-bold text-lg mb-4 text-[#2A211B] dark:text-[#F3E8D6]">Get in Touch</h3>
+            <div className="space-y-3 font-merriweather text-sm text-[#6F715D] dark:text-[#D8D9B8]">
               <div className="flex items-center">
-                <Mail className="mr-3 h-4 w-4 text-[#8FB3C9]" />
+                <Mail className="mr-3 h-4 w-4 text-[#B7653C] dark:text-[#8FB3C9]" />
                 hello@minaonthemap.com
               </div>
               <div className="flex items-center">
-                <MapPin className="mr-3 h-4 w-4 text-[#8FB3C9]" />
+                <MapPin className="mr-3 h-4 w-4 text-[#B7653C] dark:text-[#8FB3C9]" />
                 Contact details coming soon
               </div>
               <div className="flex items-center">
-                <Clock className="mr-3 h-4 w-4 text-[#8FB3C9]" />
+                <Clock className="mr-3 h-4 w-4 text-[#B7653C] dark:text-[#8FB3C9]" />
                 Updates shared here
               </div>
             </div>
           </div>
         </div>
 
-        <div className="mt-8 border-t border-[#3F6F35] pt-8 text-center">
-          <p className="font-merriweather text-sm text-[#D8D9B8]">
-            © Mina On The Map. | 
-            <a href="#" className="ml-1 text-[#8FB3C9] transition-colors hover:text-[#E1C44A]">Privacy Policy</a> | 
-            <a href="#" className="ml-1 text-[#8FB3C9] transition-colors hover:text-[#E1C44A]">Terms of Service</a>
+        <div className="mt-8 border-t border-[#C1A57F] dark:border-[#3F6F35] pt-8 text-center">
+          <p className="font-merriweather text-sm text-[#6F715D] dark:text-[#D8D9B8]">
+            © Mina On The Map. |
+            <a href="#" className="ml-1 text-[#3F6F35] transition-colors hover:text-[#B7653C] dark:text-[#8FB3C9] dark:hover:text-[#E1C44A]">Privacy Policy</a> |
+            <a href="#" className="ml-1 text-[#3F6F35] transition-colors hover:text-[#B7653C] dark:text-[#8FB3C9] dark:hover:text-[#E1C44A]">Terms of Service</a>
           </p>
         </div>
       </div>
